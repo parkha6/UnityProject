@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class MoveBackground : MonoBehaviour
+using RtanMetaverse;
+namespace RtanMetaverse
 {
-    Vector3 beforeStart = new Vector3(25.25f, 0f, 0f);
-    Vector3 returnPosition = new Vector3(-12.7f, 0f, 0f);
-    void Update()
+    public class MoveBackground : MonoBehaviour
     {
-        if (transform.position.x <= returnPosition.x)
-        { transform.position = beforeStart; }
-        else
-        { transform.position += Vector3.left * 3 * Time.deltaTime; }
+        Vector3 beforeStart = new Vector3(25.25f, 0f, 0f);
+        Vector3 returnPosition = new Vector3(-12.7f, 0f, 0f);
+        void Update()
+        {
+            if (transform.position.x <= returnPosition.x)
+            { transform.position = beforeStart; }
+            else
+            { transform.position += Vector3.left * 3 * Time.deltaTime; }
+        }
     }
 }
