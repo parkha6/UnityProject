@@ -1,6 +1,11 @@
 # 르탄이 메타버스 과제
+## 프로젝트 설명
+유니티로 자유롭게 돌아다닐 수 있고 미니게임이 여러개 있는 앱을 제작
 ## 프레임 워크 구상
-https://www.figma.com/design/sdNSlmYnrTuJmzQBm5uW8c/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=PAP5glTawhADmwMq-0
+* [아이디어 스케치(figma)](https://www.figma.com/design/sdNSlmYnrTuJmzQBm5uW8c/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=PAP5glTawhADmwMq-0)
+## 구현 기능 설명
+횡스크롤 방식의 메뉴와 미니게임을 연결해 만듬.
+***
 ## 에셋 저작권
 * 르탄이 이미지 : 스파르타 코딩클럽
 * 폰트 : 배민 한나
