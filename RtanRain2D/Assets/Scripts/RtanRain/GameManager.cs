@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
     }
     void TimeStop()//시간을 멈추는 함수
     { Time.timeScale = 0.0f; }
-    public void QuitGame()//게임을 끝내는 함수
+    internal void QuitGame()//게임을 끝내는 함수
     { Application.Quit(); }
     //부자가 되자용 함수
     void StartRtanRain()//부자가 되자 시작 함수
@@ -137,19 +137,19 @@ public class GameManager : MonoBehaviour
     { Instantiate(coin); }
     void TrapDrop()//맞으면 죽는 함정을 떨어트리는 함수
     { Instantiate(trap); }
-    public void AddMoney(int money)//소지금이 누적되는 함수
+    internal void AddMoney(int money)//소지금이 누적되는 함수
     {
         getMoney += money;
         allMoney += money;
         moneyText.text = allMoney.ToString();
         resultText.text = getMoney.ToString();
     }
-    public void RtanRainEnd(string endMessage)//부자가 되자 게임을 끝내는 함수
+    internal void RtanRainEnd(string endMessage)//부자가 되자 게임을 끝내는 함수
     {
         gameOver = true;
         endUI.SetActive(true);
         endText.text = endMessage;
-        Time.timeScale = 0f;
+        TimeStop();
         PlayerPrefs.SetInt(firstKey, allMoney);
     }
 
@@ -241,7 +241,6 @@ public class GameManager : MonoBehaviour
             chickenImage3.SetActive(false);
             cookAmountText3.text = "";
         }
-
     }
     void CheckEnd()//인벤이 가득 찼을때 게임을 끝내기 위한 함수
     {
@@ -251,7 +250,7 @@ public class GameManager : MonoBehaviour
             MyShieldEnd("가방이 가득 차버렸어요.");
         }
     }
-    public void MyShieldEnd(string inputMessage)//고기 지키기 게임을 끝내는 함수
+    internal void MyShieldEnd(string inputMessage)//고기 지키기 게임을 끝내는 함수
     {
         endText.text = inputMessage;
         food.SetBool("eaten", true);
@@ -260,13 +259,22 @@ public class GameManager : MonoBehaviour
         gameOver = true;
         PlayerPrefs.SetInt(secondKey, allChickenAmount);
     }
-    void UpdateFlappySurf()//고기를 지켜라 업데이트 함수
+    //서핑을 하자용 함수
+    void UpdateFlappySurf()//서핑을 하자 업데이트 함수
     {
         if (!gameOver)
         {
-            surfDistance += surfSpeed*Time.deltaTime;
+            surfDistance += surfSpeed * Time.deltaTime;
             surfDistanceText.text = surfDistance.ToString("N0");
+            resultText.text = surfDistance.ToString("N0");
             //TODO:여기 작업해야 함.
         }
+    }
+    internal void FlappySurfEnd(string inputMessage)
+    {
+        endText.text = inputMessage;
+        TimeStop();
+        endUI.SetActive(true);
+        gameOver = true;
     }
 }

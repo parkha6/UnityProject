@@ -996,10 +996,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ddfaf3f5a804034b96888e1bd5d2bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endUI: {fileID: 0}
-  endText: {fileID: 0}
+  endUI: {fileID: 1675378521}
+  endText: {fileID: 1196907620}
   timeText: {fileID: 0}
-  resultText: {fileID: 0}
+  resultText: {fileID: 1819753126}
   GameScene: FlappySurf
   timeWatch: 0
   gameOver: 0

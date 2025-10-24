@@ -13,7 +13,6 @@ namespace RtanMetaverse
         Vector3 targetPosition;
         bool flying = true;
         SpriteRenderer renderer;
-
         // Start is called before the first frame update
         void Start()
         {
@@ -29,9 +28,7 @@ namespace RtanMetaverse
             Application.targetFrameRate = 60;
             targetPosition = new Vector3(0f, -3.20f);
             flying = true;
-
         }
-
         // Update is called once per frame
         void Update()
         {
@@ -41,13 +38,9 @@ namespace RtanMetaverse
         void moving()
         {
             if (flying)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-            }
+            { transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime); }
             else if (transform.position.y <= -5.7f)
-            {
-                Destroy(gameObject);
-            }
+            { Destroy(gameObject); }
         }
         private void OnCollisionEnter2D(Collision2D other)
         {
@@ -63,13 +56,9 @@ namespace RtanMetaverse
         void FacedDirection()
         {
             if (transform.position.x >= 0)
-            {
-                renderer.flipX = false;
-            }
+            { renderer.flipX = false; }
             else if (transform.position.x <= 0)
-            {
-                renderer.flipX = true;
-            }
+            { renderer.flipX = true; }
         }
     }
 }
