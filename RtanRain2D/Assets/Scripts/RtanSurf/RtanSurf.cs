@@ -58,14 +58,12 @@ namespace RtanMetaverse
                 else if (Input.GetMouseButtonUp(0))//버튼을 떼는 순간 점프. ForceMode2D로 질량이 계산되게 했다.
                 {
                     rtanBody.AddForce(direction * RtanJumping, ForceMode2D.Impulse);
-                    //TODO:뛴다음 점프 초기화인데 난 물체에 닿았을때 초기화되게 하고 싶긴 함.
+                    rtanJumping = 0f;
                 }//오 이렇게 메서드 쓰는구나.
             }
         }
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.CompareTag("Ground"))
-            { rtanJumping = 0f; }
             if (other.gameObject.CompareTag("Rock"))
             { GameManager.instance.FlappySurfEnd("르탄이가 암석에 부딪혔어요."); }
         }
