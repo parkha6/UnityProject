@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8e83ce26207364198e6e7ccceb2635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraSpeed: 1
   returnXPosition: -12.5
 --- !u!1 &33692175
 GameObject:
@@ -317,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8e83ce26207364198e6e7ccceb2635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraSpeed: 6
   returnXPosition: -12.5
 --- !u!1 &124057360
 GameObject:
@@ -1400,6 +1402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8e83ce26207364198e6e7ccceb2635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraSpeed: 6
   returnXPosition: -12.5
 --- !u!1 &837557993
 GameObject:
@@ -1655,6 +1658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e8e83ce26207364198e6e7ccceb2635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraSpeed: 1
   returnXPosition: -12.5
 --- !u!1 &883762718
 GameObject:

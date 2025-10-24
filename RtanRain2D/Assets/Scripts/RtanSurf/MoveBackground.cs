@@ -4,6 +4,7 @@ using UnityEngine;
 using RtanMetaverse;
 public class MoveBackground : MonoBehaviour
 {
+    [SerializeField]
     internal float cameraSpeed = 4.5f;
     private float backgroundWidth;
     [SerializeField]

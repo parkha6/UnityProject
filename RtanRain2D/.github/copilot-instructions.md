@@ -2,7 +2,7 @@
 - Project name: RtanRain2D
 - Unity version: Unity 2022.3.62f2
 - Active game object:
-  - Name: BackgroundRock2
-  - Tag: Untagged
+  - Name: Rock4
+  - Tag: Rock
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
