@@ -87,7 +87,9 @@ public class RockMaker : MonoBehaviour
     {
         location.y = Random.Range(minHeight, maxHeight);
         location.x = maxWidth;
+        float rockScale = Random.Range(0.5f, 1f);
         GameObject rock = Instantiate(randomRock,location, Quaternion.identity);
+        rock.transform.localScale = new Vector2(rockScale,rockScale);
         sortingRender = rock.GetComponent<SpriteRenderer>();
         if (location.y >= rtanHeight)
         { sortingRender.sortingOrder = 2; }

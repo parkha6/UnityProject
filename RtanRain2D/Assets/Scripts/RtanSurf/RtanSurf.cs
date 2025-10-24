@@ -1,8 +1,4 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
-using RtanMetaverse;
-using UnityEngine.EventSystems;
 
 namespace RtanMetaverse
 {
@@ -14,7 +10,7 @@ namespace RtanMetaverse
         private MoveBackground moveBackground;
         private Vector3 wavePosition = new Vector3(0f, 0f, 0f);
         float rtanJumping = 0f;
-        float RtanJumping
+        public float RtanJumping
         {
             get { return rtanJumping; }
             set
@@ -45,14 +41,15 @@ namespace RtanMetaverse
                     case 0:
                         break;
                     case 1:
-                        GameObject waveMove = Instantiate(wave, wavePosition, Quaternion.identity);
+                        Instantiate(wave, wavePosition, Quaternion.identity);
+                        Instantiate(wave, wavePosition, Quaternion.identity);
                         break;
                     default:
                         break;
                 }
-                if (transform.position.x > -1.1f)//재사용할지는 모르니까 일단 메서드로 빼지는 말자.
+                if (transform.position.x > -1.6f)//재사용할지는 모르니까 일단 메서드로 빼지는 말자.
                 { transform.position += Vector3.left * (moveBackground.cameraSpeed + 1f) * Time.deltaTime; }
-                else if (transform.position.x < -1.2f)
+                else if (transform.position.x < -1.7f)
                 { transform.position -= Vector3.left * (moveBackground.cameraSpeed + 1f) * Time.deltaTime; }
                 if (Input.GetMouseButtonDown(0))
                 { RtanJumping += 3f; }
@@ -64,7 +61,6 @@ namespace RtanMetaverse
                     rtanJumping = 0f;//TODO:뛴다음 점프 초기화인데 난 물체에 닿았을때 초기화되게 하고 싶긴 함.
                 }//오 이렇게 메서드 쓰는구나.
             }
-
         }
     }
 }

@@ -60,6 +60,13 @@ public class GameManager : MonoBehaviour
     static int allChickenAmount = 0;//지금까지 구운 고기의 수
     int finishedChicken = 0;//이번판에서 구운 고기의 수
     string secondKey = "userChickenAmount";//영구적으로 저장되는 고기 변수 이름
+    string scene3 = "FlappySurf";
+    [SerializeField]
+    Text surfDistanceText;
+    float surfDistance = 0;
+    [SerializeField]
+    private float surfSpeed = 0f;
+
     private void Awake()
     {
         Instance();
@@ -69,44 +76,32 @@ public class GameManager : MonoBehaviour
     {
         StartAll();
         if (GameScene == scene1)
-        {
-            StartRtanRain();
-        }
+        {StartRtanRain();}
         else if (GameScene == scene2)
-        {
-            StartMyShield();
-        }
+        {StartMyShield();}
     }
     void Update()
     {
         //입력받은 게임씬의 이름에 맞춰서 업데이트를 재생
         if (GameScene == scene1)
-        {
-            UpdateRtanRain();
-        }
+        { UpdateRtanRain(); }
         else if (GameScene == scene2)
-        {
-            UpdateMyShield();
-        }
+        { UpdateMyShield(); }
+        else if (GameScene == scene3)
+        { UpdateFlappySurf(); }
     }
     //공용함수
     void Instance()//싱글톤용 함수
     {
         if (instance == null)
-        {
-            instance = this;
-        }
+        { instance = this; }
     }
     void HasKey()//컴에 저장된 변수를 불러오는 함수
     {
         if (PlayerPrefs.HasKey(firstKey))
-        {
-            allMoney = PlayerPrefs.GetInt(firstKey);
-        }
+        { allMoney = PlayerPrefs.GetInt(firstKey); }
         if (PlayerPrefs.HasKey(secondKey))
-        {
-            allChickenAmount = PlayerPrefs.GetInt(secondKey);
-        }
+        { allChickenAmount = PlayerPrefs.GetInt(secondKey); }
     }
     void StartAll()//스타트 함수를 시작할때 공통적으로 들어가는 부분
     {
@@ -114,13 +109,9 @@ public class GameManager : MonoBehaviour
         gameOver = false;
     }
     void TimeStop()//시간을 멈추는 함수
-    {
-        Time.timeScale = 0.0f;
-    }
+    { Time.timeScale = 0.0f; }
     public void QuitGame()//게임을 끝내는 함수
-    {
-        Application.Quit();
-    }
+    { Application.Quit(); }
     //부자가 되자용 함수
     void StartRtanRain()//부자가 되자 시작 함수
     {
@@ -131,29 +122,21 @@ public class GameManager : MonoBehaviour
     void UpdateRtanRain()//부자가 되자 업데이트 함수
     {
         if (gameOver)
-        {
-            return;
-        }
+        { return; }
         if (timeWatch > 0f)
         {
             CoinRain();
             timeWatch -= Time.deltaTime;
         }
         else
-        {
-            RtanRainEnd("르탄이는 더 이상 달릴 힘이 없어요.");
-        }
+        { RtanRainEnd("르탄이는 더 이상 달릴 힘이 없어요."); }
 
         timeText.text = timeWatch.ToString("N2");
     }
     void CoinRain()//코인을 떨어트리는 함수
-    {
-        Instantiate(coin);
-    }
+    { Instantiate(coin); }
     void TrapDrop()//맞으면 죽는 함정을 떨어트리는 함수
-    {
-        Instantiate(trap);
-    }
+    { Instantiate(trap); }
     public void AddMoney(int money)//소지금이 누적되는 함수
     {
         getMoney += money;
@@ -180,11 +163,7 @@ public class GameManager : MonoBehaviour
     }
     void UpdateMyShield()//고기를 지켜라 업데이트 함수
     {
-        if (gameOver)
-        {
-
-        }
-        else
+        if (!gameOver)
         {
             timeWatch += Time.deltaTime;
             cookingTime += Time.deltaTime;
@@ -196,17 +175,11 @@ public class GameManager : MonoBehaviour
     {
         int batDirection = Random.Range(1, 4);
         if (batDirection == 1)
-        {
-            Instantiate(batTop);
-        }
+        { Instantiate(batTop); }
         else if (batDirection == 2)
-        {
-            Instantiate(batLeft);
-        }
+        { Instantiate(batLeft); }
         else if (batDirection == 3)
-        {
-            Instantiate(batRight);
-        }
+        { Instantiate(batRight); }
     }
     void FinishCooking()//통닭을 굽는 함수
     {
@@ -221,22 +194,14 @@ public class GameManager : MonoBehaviour
             resultText.text = finishedChicken.ToString();
         }
         else if (cookingTime >= 5.0f && cookingTime <= roastedTimes)
-        {
-            cookingText.text = "";
-        }
+        { cookingText.text = ""; }
 
         if (allChickenAmount == 1)
-        {
-            chickenImage.SetActive(true);
-        }
+        { chickenImage.SetActive(true); }
         if (allChickenAmount == bagSize + 1)
-        {
-            chickenImage2.SetActive(true);
-        }
+        { chickenImage2.SetActive(true); }
         if (allChickenAmount == bagSize * 2 + 1)
-        {
-            chickenImage3.SetActive(true);
-        }
+        { chickenImage3.SetActive(true); }
     }
     void ShowChicken()//치킨수를 인벤창에 보여주는 함수
     {
@@ -294,5 +259,14 @@ public class GameManager : MonoBehaviour
         endUI.SetActive(true);
         gameOver = true;
         PlayerPrefs.SetInt(secondKey, allChickenAmount);
+    }
+    void UpdateFlappySurf()//고기를 지켜라 업데이트 함수
+    {
+        if (!gameOver)
+        {
+            surfDistance += surfSpeed*Time.deltaTime;
+            surfDistanceText.text = surfDistance.ToString("N0");
+            //TODO:여기 작업해야 함.
+        }
     }
 }
