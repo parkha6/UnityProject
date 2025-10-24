@@ -27,3 +27,6 @@ https://quimeragames.itch.io/bat-pixel-art-free
 
 자체제작:
 치킨을 꽃아놓은 막대기...
+
+바위에셋 : Rock Sprites by Xenophero 
+https://xenophero.itch.io/rock-sprites
