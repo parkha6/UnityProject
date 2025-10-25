@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class Shield : MonoBehaviour
 {
     SpriteRenderer renderer;

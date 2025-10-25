@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 1432851677771302838}
   - component: {fileID: 2535930695169494857}
   - component: {fileID: 4808474730332016979}
-  - component: {fileID: 555364616040204769}
   - component: {fileID: 2458111518451499573}
+  - component: {fileID: -600012276110162430}
+  - component: {fileID: 7141064006043734165}
   m_Layer: 0
   m_Name: Rock10
   m_TagString: Rock
@@ -146,19 +147,6 @@ PolygonCollider2D:
       - {x: 0.4654534, y: 0.13507223}
       - {x: 0.46994603, y: 0.4896654}
   m_UseDelaunayMesh: 0
---- !u!114 &555364616040204769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7603750040592497667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33209d22e977d674b92bf1d08657545e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rockSpeed: 4.5
 --- !u!50 &2458111518451499573
 Rigidbody2D:
   serializedVersion: 4
@@ -186,3 +174,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 2
+--- !u!114 &-600012276110162430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603750040592497667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3c62fba8aaf5840994cff63a633dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7141064006043734165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7603750040592497667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c357445786fc6bc41ae5278e3a867064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

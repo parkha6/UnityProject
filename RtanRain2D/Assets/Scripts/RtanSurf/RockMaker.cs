@@ -31,12 +31,10 @@ public class RockMaker : MonoBehaviour
     private float revealTime = 1.0f;
     float currentTime = 0.0f;
     float minHeight = -3.5f;
-    float rtanHeight = -3.33f;
     float maxHeight = -3.1f;
     float minWidth = -10.5f;
     float maxWidth = 30f;
     Vector3 location = new Vector3(0f, 0f, 0f);
-    SpriteRenderer sortingRender;
     // Update is called once per frame
     void Update()
     {
@@ -87,14 +85,7 @@ public class RockMaker : MonoBehaviour
     {
         location.y = Random.Range(minHeight, maxHeight);
         location.x = maxWidth;
-        float rockScale = Random.Range(0.5f, 1f);
         GameObject rock = Instantiate(randomRock,location, Quaternion.identity);
-        rock.transform.localScale = new Vector2(rockScale,rockScale);
-        sortingRender = rock.GetComponent<SpriteRenderer>();
-        if (location.y >= rtanHeight)
-        { sortingRender.sortingOrder = 2; }
-        else if (location.y <= rtanHeight)
-        { sortingRender.sortingOrder = 4; }
         currentTime = 0f;
     }
 }
