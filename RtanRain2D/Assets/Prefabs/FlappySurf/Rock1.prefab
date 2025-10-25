@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8329572582094881473}
   - component: {fileID: 2134657670023487925}
   - component: {fileID: 8272899189719529374}
-  - component: {fileID: 4642734016760990523}
   - component: {fileID: -8344828907977802038}
   m_Layer: 0
   m_Name: Rock1
@@ -75,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2063628559, guid: bf7ad01700e19a94093ecbec956badae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,19 +146,6 @@ PolygonCollider2D:
       - {x: 0.043360114, y: 1.0470328}
       - {x: -0.13857606, y: 1.2000866}
   m_UseDelaunayMesh: 0
---- !u!114 &4642734016760990523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5313773110264412584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33209d22e977d674b92bf1d08657545e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rockSpeed: 4
 --- !u!50 &-8344828907977802038
 Rigidbody2D:
   serializedVersion: 4

@@ -76,9 +76,11 @@ public class GameManager : MonoBehaviour
     {
         StartAll();
         if (GameScene == scene1)
-        {StartRtanRain();}
+        { StartRtanRain(); }
         else if (GameScene == scene2)
-        {StartMyShield();}
+        { StartMyShield(); }
+        else if (GameScene == scene3)
+        { StartFlappySurf(); }
     }
     void Update()
     {
@@ -260,6 +262,8 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt(secondKey, allChickenAmount);
     }
     //서핑을 하자용 함수
+    void StartFlappySurf()
+    { moneyText.text = allMoney.ToString(); }
     void UpdateFlappySurf()//서핑을 하자 업데이트 함수
     {
         if (!gameOver)

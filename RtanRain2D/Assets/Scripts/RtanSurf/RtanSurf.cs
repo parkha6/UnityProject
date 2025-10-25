@@ -64,6 +64,11 @@ namespace RtanMetaverse
         }
         private void OnCollisionEnter2D(Collision2D other)
         {
+            if (other.gameObject.CompareTag("Coin"))
+            {
+                GameManager.instance.AddMoney(100);
+                Destroy(other.gameObject);
+            }
             if (other.gameObject.CompareTag("Rock"))
             { GameManager.instance.FlappySurfEnd("르탄이가 암석에 부딪혔어요."); }
         }
