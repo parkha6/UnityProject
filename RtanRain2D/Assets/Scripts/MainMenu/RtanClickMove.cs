@@ -13,13 +13,13 @@ public class RtanClickMove : MonoBehaviour
     {
         walkAnimator = GetComponent<Animator>();
         if (walkAnimator == null)
-        { Debug.Log("애니메이터가 없습니다."); }
+        { Debug.Log("No animator"); }
         rigidBody = GetComponent<Rigidbody2D>();
         if (rigidBody == null)
-        { Debug.Log("RigidBody 2d를 추가하지 않았습니다."); }
+        { Debug.Log("not added RigidBody 2d"); }
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer == null)
-        { Debug.Log("스프라이트가 없습니다."); }
+        { Debug.Log("no sprite"); }
     }
     void Update()
     {
