@@ -20,12 +20,8 @@ public class Shield : MonoBehaviour
     void FacedDirection()
     {
         if (transform.position.x >= 0)
-        {
-            renderer.flipX = false;
-        }
+        { renderer.flipX = false; }
         else if (transform.position.x <= 0)
-        {
-            renderer.flipX = true;
-        }
+        { renderer.flipX = true; }
     }
 }
