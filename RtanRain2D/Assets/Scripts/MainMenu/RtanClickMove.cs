@@ -6,6 +6,13 @@ public class RtanClickMove : MonoBehaviour
     private float rtanSpeed = 1f;
     internal bool isMoving = false;
     internal Vector3 nextPosition;
+    private Rigidbody rigidBody;
+    private void Awake()
+    {
+        rigidBody = GetComponent<Rigidbody>();
+        if (rigidBody == null)
+        { Debug.Log("RigidBody 2d를 추가하지 않았습니다."); }
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -20,14 +27,17 @@ public class RtanClickMove : MonoBehaviour
         if (Mathf.Abs(transform.position.x - nextPosition.x) < 0.001f && Mathf.Abs(transform.position.y - nextPosition.y) < 0.001f)
         {
             nextPosition = transform.position;
-            isMoving = false; 
+            isMoving = false;
         }
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
             nextPosition = transform.position;
-            isMoving = false; }
+            rigidBody.velocity = Vector2.zero;
+            rigidBody.angularVelocity = new Vector3(0f, 0f, 0f);
+            isMoving = false;
+        }
     }
 }
