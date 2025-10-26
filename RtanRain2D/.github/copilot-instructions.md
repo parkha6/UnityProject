@@ -2,7 +2,7 @@
 - Project name: RtanRain2D
 - Unity version: Unity 2022.3.62f2
 - Active game object:
-  - Name: Ground
-  - Tag: Ground
+  - Name: Refelection2
+  - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
