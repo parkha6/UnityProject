@@ -155,15 +155,15 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt(firstKey, allMoney);
     }
 
-    //고기를 지켜라용 함수
-    void StartMyShield()//고기를 지켜라 시작 함수
+    //통닭을 지켜라용 함수
+    void StartMyShield()//통닭을 지켜라 시작 함수
     {
         InvokeRepeating("BatReveal", 0f, 1f);
         cookingText.text = "";
         ShowChicken();
         CheckEnd();
     }
-    void UpdateMyShield()//고기를 지켜라 업데이트 함수
+    void UpdateMyShield()//통닭을 지켜라 업데이트 함수
     {
         if (!gameOver)
         {
@@ -252,7 +252,7 @@ public class GameManager : MonoBehaviour
             MyShieldEnd("가방이 가득 차버렸어요.");
         }
     }
-    internal void MyShieldEnd(string inputMessage)//고기 지키기 게임을 끝내는 함수
+    internal void MyShieldEnd(string inputMessage)//통닭 지키기 게임을 끝내는 함수
     {
         endText.text = inputMessage;
         food.SetBool("eaten", true);
