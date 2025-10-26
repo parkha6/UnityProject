@@ -262,6 +262,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt(secondKey, allChickenAmount);
     }
     //서핑을 하자용 함수
+    //TODO: 난이도가 서서히 올라가도록 돌의 사이즈를 분류해서 순차적으로 나오게 하면 좋을거 같다.
     void StartFlappySurf()
     { moneyText.text = allMoney.ToString(); }
     void UpdateFlappySurf()//서핑을 하자 업데이트 함수
@@ -271,7 +272,6 @@ public class GameManager : MonoBehaviour
             surfDistance += surfSpeed * Time.deltaTime;
             surfDistanceText.text = surfDistance.ToString("N0");
             resultText.text = surfDistance.ToString("N0");
-            //TODO:여기 작업해야 함.
         }
     }
     internal void FlappySurfEnd(string inputMessage)
