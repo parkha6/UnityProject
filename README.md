@@ -4,7 +4,7 @@
 ## 프레임 워크 구상
 * [아이디어 스케치(figma)](https://www.figma.com/design/sdNSlmYnrTuJmzQBm5uW8c/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=PAP5glTawhADmwMq-0)
 ## 미니게임 설명
-횡스크롤 방식의 메뉴와 미니게임을 연결해 만듬.
+메타버스 내에서 재생할 수 있는 미니게임과 관련된 설명입니다.
 ### 부자가 되자!
 ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/RtanRain.jpg?raw=true)  
 기본 강의인 빗물받는 르탄이를 변형한 게임입니다.  
