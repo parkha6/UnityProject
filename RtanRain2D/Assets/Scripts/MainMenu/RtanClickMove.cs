@@ -6,10 +6,10 @@ public class RtanClickMove : MonoBehaviour
     private float rtanSpeed = 1f;
     internal bool isMoving = false;
     internal Vector3 nextPosition;
-    private Rigidbody rigidBody;
+    private Rigidbody2D rigidBody;
     private void Awake()
     {
-        rigidBody = GetComponent<Rigidbody>();
+        rigidBody = GetComponent<Rigidbody2D>();
         if (rigidBody == null)
         { Debug.Log("RigidBody 2d를 추가하지 않았습니다."); }
     }
@@ -35,8 +35,6 @@ public class RtanClickMove : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             nextPosition = transform.position;
-            rigidBody.velocity = Vector2.zero;
-            rigidBody.angularVelocity = new Vector3(0f, 0f, 0f);
             isMoving = false;
         }
     }
