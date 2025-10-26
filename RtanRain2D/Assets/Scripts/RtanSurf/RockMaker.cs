@@ -5,6 +5,10 @@ using UnityEngine;
 public class RockMaker : MonoBehaviour
 {
     [SerializeField]
+    private GameObject cloudPrefab;
+    [SerializeField]
+    private GameObject landPrefab;
+    [SerializeField]
     private GameObject rock1;
     [SerializeField]
     private GameObject rock2;
@@ -29,16 +33,35 @@ public class RockMaker : MonoBehaviour
 
     [SerializeField]
     private float revealTime = 1.0f;
+    [SerializeField]
+    private float cloudRevealTime = 1.0f;
+    [SerializeField]
+    private float landRevealTime = 1.0f;
     float currentTime = 0.0f;
+    float cloudCurrentTime = 40.0f;
+    float landCurrentTime = 0.0f;
     float minHeight = -3.5f;
     float maxHeight = -3.1f;
     float minWidth = -10.5f;
     float maxWidth = 30f;
     Vector3 location = new Vector3(0f, 0f, 0f);
+    Vector3 backgroundLocation = new Vector3(39f, 0f, 0f);
     // Update is called once per frame
     void Update()
     {
         currentTime += Time.deltaTime;
+        cloudCurrentTime += Time.deltaTime;
+        landCurrentTime += Time.deltaTime;
+        if (cloudCurrentTime >= cloudRevealTime)
+        {
+            Instantiate(cloudPrefab, backgroundLocation, Quaternion.identity);
+            cloudCurrentTime = 0.0f;
+        }
+        if (landCurrentTime >= landRevealTime)
+        {
+            Instantiate(landPrefab, backgroundLocation, Quaternion.identity);
+            landCurrentTime = 0.0f;
+        }
         if (currentTime >= revealTime)
         {
             switch (Random.Range(1, 13))
@@ -85,7 +108,7 @@ public class RockMaker : MonoBehaviour
     {
         location.y = Random.Range(minHeight, maxHeight);
         location.x = maxWidth;
-        GameObject rock = Instantiate(randomRock,location, Quaternion.identity);
+        GameObject rock = Instantiate(randomRock, location, Quaternion.identity);
         currentTime = 0f;
     }
 }
