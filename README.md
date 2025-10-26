@@ -6,6 +6,8 @@
   + 완성된 게임의 모습을 먼저 정하기 위해 대략적인 화면 구성과 게임에 대한 아이디어 등을 작성하고 작업에 시작했습니다.
 ## 미니게임 설명
 메타버스 내에서 재생할 수 있는 미니게임과 관련된 설명입니다.
+![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/FreeAspect.jpg?raw=true)  
+모든 씬은 다양한 화면비에 동적으로 대응할 수 있도록 UI가 배치되었습니다.  
 ### 부자가 되자!
 ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/RtanRain.jpg?raw=true)  
 기본 강의인 빗물받는 르탄이를 변형한 게임입니다.  
