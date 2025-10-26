@@ -9,7 +9,9 @@
 메타버스 내에서 재생할 수 있는 미니게임과 관련된 설명입니다.  
   
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/FreeAspect.jpg?raw=true)  
-* 모든 씬은 화면비가 바뀌어도 크게 이상해지지 않도록 UI가 배치되었습니다.  
+* 모든 씬은 화면비가 바뀌어도 크게 이상해지지 않도록 UI가 배치되었습니다.
+* 부자가 되자! 씬만 가로 화면비가 일정 이상 길어지면 검은색이 나오기 때문에 스크립팅으로 앵커를 조정해놨습니다.
+  때문에 에디터에서는 UI가 튀어나가도 게임을 재생하시면 화면비에 맞게 UI가 재조정됩니다. 
 ### 부자가 되자!
 ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/RtanRain.jpg?raw=true)  
 기본 강의인 빗물받는 르탄이를 변형한 게임입니다.  
