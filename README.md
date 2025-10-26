@@ -3,8 +3,15 @@
 유니티로 자유롭게 돌아다닐 수 있고 미니게임이 여러개 있는 앱을 제작
 ## 프레임 워크 구상
 * [아이디어 스케치(figma)](https://www.figma.com/design/sdNSlmYnrTuJmzQBm5uW8c/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=PAP5glTawhADmwMq-0)
-## 구현 기능 설명
+## 미니게임 설명
 횡스크롤 방식의 메뉴와 미니게임을 연결해 만듬.
+### 서핑을 하자!
+![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/RtanSurf.jpg?raw=true)  
+플래피 버드를 변형한 게임입니다.  
+  
+마우스를 누른 시간만큼 높게 점프를 합니다.  
+바닥에 닿아도 죽지 않기 때문에 난이도 조절을 위해 다단점프는 없에고 점프는 한번만 할 수 있게 바꿨습니다.  
+플레이어가 아슬아슬하게 뛰도록 유도하게 바위 위에 코인을 배치하였습니다.  
 ***
 ## 에셋 저작권
 * 르탄이 이미지 : 스파르타 코딩클럽
