@@ -10,10 +10,4 @@ public class SizeCreate : MonoBehaviour
         float rockScale = Random.Range(0.5f, 1f);
         transform.localScale = new Vector2(rockScale, rockScale);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
