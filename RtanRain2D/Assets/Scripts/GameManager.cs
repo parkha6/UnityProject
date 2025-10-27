@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text endText;//끝났을때 표시되는 메세지를 넣는 자리
     [SerializeField]
+    Text showResultText;
+    [SerializeField]
     Text timeText;//시간을 표시하는 텍스트를 넣는 자리
     [SerializeField]
     Text resultText;//끝났을 때 결과값을 표시하는 자리
@@ -166,9 +168,14 @@ public class GameManager : MonoBehaviour
     }
     internal void RtanRainEnd(string endMessage)//부자가 되자 게임을 끝내는 함수
     {
+
+        endText.text = endMessage;
+        if (getMoney <= 0)
+        { showResultText.text = "Game Over"; }
+        else if (getMoney > 0)
+        { showResultText.text = "Earn Cash"; }
         gameOver = true;
         endUI.SetActive(true);
-        endText.text = endMessage;
         TimeStop();
         PlayerPrefs.SetInt(firstKey, allMoney);
     }
@@ -267,12 +274,16 @@ public class GameManager : MonoBehaviour
         if (allChickenAmount >= bagSize * 3)
         {
             cookingText.text = "가방이 가득 찼다!";
-            MyShieldEnd("가방이 가득 차버렸어요.");
+            MyShieldEnd("가방이 가득 찼습니다.");
         }
     }
     internal void MyShieldEnd(string inputMessage)//통닭 지키기 게임을 끝내는 함수
     {
         endText.text = inputMessage;
+        if (finishedChicken <= 0)
+        { showResultText.text = "Game Over"; }
+        else if (finishedChicken > 0)
+        { showResultText.text = "Meal Ready"; }
         food.SetBool("eaten", true);
         Invoke("TimeStop", 0.5f);
         endUI.SetActive(true);

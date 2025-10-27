@@ -49,7 +49,10 @@ public class BatComing : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Cooking"))
         {
-            GameManager.instance.MyShieldEnd("박쥐가 통닭을 먹어버렸어요.");
+            if (flying)
+            { GameManager.instance.MyShieldEnd("박쥐가 통닭을 먹어버렸습니다."); }
+            else if (!flying)
+            { GameManager.instance.MyShieldEnd("박쥐가 통닭에 떨어졌습니다."); }
         }
     }
     void FacedDirection()
