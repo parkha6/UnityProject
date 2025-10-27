@@ -32,7 +32,7 @@ public class RtanClickMove : MonoBehaviour
             { spriteRenderer.flipX = true; }
             else if (nextPosition.x > transform.position.x)
             { spriteRenderer.flipX = false; }
-            isMoving = true;
+            isMoving = true;//?
         }
         if (isMoving)
         {

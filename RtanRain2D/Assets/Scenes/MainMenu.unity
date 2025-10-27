@@ -285,6 +285,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435681193}
   m_CullTransparentMesh: 1
+--- !u!1 &470224753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470224754}
+  - component: {fileID: 470224755}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470224754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470224753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2, y: -2.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &470224755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470224753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddfaf3f5a804034b96888e1bd5d2bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endUI: {fileID: 0}
+  endText: {fileID: 0}
+  timeText: {fileID: 0}
+  resultText: {fileID: 0}
+  GameScene: MainMenu
+  timeWatch: 0
+  gameOver: 0
+  coin: {fileID: 0}
+  trap: {fileID: 0}
+  moneyText: {fileID: 0}
+  batTop: {fileID: 0}
+  batLeft: {fileID: 0}
+  batRight: {fileID: 0}
+  chickenImage: {fileID: 0}
+  chickenImage2: {fileID: 0}
+  chickenImage3: {fileID: 0}
+  cookingText: {fileID: 0}
+  cookAmountText: {fileID: 0}
+  cookAmountText2: {fileID: 0}
+  cookAmountText3: {fileID: 0}
+  food: {fileID: 0}
+  roastedTimes: 0
+  bagSize: 0
+  surfDistanceText: {fileID: 0}
+  surfSpeed: 0
 --- !u!1 &540143980
 GameObject:
   m_ObjectHideFlags: 0
@@ -4536,3 +4605,4 @@ SceneRoots:
   - {fileID: 982878837}
   - {fileID: 2032009244}
   - {fileID: 1074678053}
+  - {fileID: 470224754}

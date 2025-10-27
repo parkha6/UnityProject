@@ -19,11 +19,16 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     bool gameOver = false; //게임이 끝났는지 안 끝났는지 체크하는 공용 불리언.
     internal bool GameOver { get { return gameOver; } }
+    string mainMenu = "MainMenu";
     string scene1 = "RtanRain";//여기서부터 부자가 되자 용 변수
     [SerializeField]
     GameObject coin;//코인 오브젝트
     [SerializeField]
-    GameObject trap;//뼈 오브젝트
+    GameObject trap1;//뼈 오브젝트
+    [SerializeField]
+    GameObject trap2;//뼈 오브젝트
+    [SerializeField]
+    GameObject trap3;//뼈 오브젝트
     [SerializeField]
     Text moneyText;//은행계좌 잔액 표시용 텍스트
     static int allMoney;//지금까지 모은 돈의 액수
@@ -75,7 +80,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartAll();
-        if (GameScene == scene1)
+        if (GameScene == mainMenu)
+        { StartMainMenu(); }
+        else if (GameScene == scene1)
         { StartRtanRain(); }
         else if (GameScene == scene2)
         { StartMyShield(); }
@@ -114,6 +121,11 @@ public class GameManager : MonoBehaviour
     { Time.timeScale = 0.0f; }
     internal void QuitGame()//게임을 끝내는 함수
     { Application.Quit(); }
+    //메인매뉴 함수
+    void StartMainMenu()
+    {
+        Debug.Log("뭔가 넣어야지");
+    }
     //부자가 되자용 함수
     void StartRtanRain()//부자가 되자 시작 함수
     {
@@ -138,7 +150,15 @@ public class GameManager : MonoBehaviour
     void CoinRain()//코인을 떨어트리는 함수
     { Instantiate(coin); }
     void TrapDrop()//맞으면 죽는 함정을 떨어트리는 함수
-    { Instantiate(trap); }
+    {
+        int trapNum = Random.Range(0, 3);
+        if (trapNum == 0)
+        { Instantiate(trap1); }
+        else if (trapNum == 1)
+        { Instantiate(trap2); }
+        else if (trapNum == 2)
+        { Instantiate(trap3); }
+    }
     internal void AddMoney(int money)//소지금이 누적되는 함수
     {
         getMoney += money;

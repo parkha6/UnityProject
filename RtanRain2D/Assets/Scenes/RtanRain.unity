@@ -826,7 +826,9 @@ MonoBehaviour:
   timeWatch: 50
   gameOver: 0
   coin: {fileID: 4885436350602115947, guid: c0a9fdd92cd23c84eaa060b692c6eb75, type: 3}
-  trap: {fileID: 6790856187481688661, guid: d155fcb580df6ab4e8f141016f02f654, type: 3}
+  trap1: {fileID: 4231167972305877608, guid: 2b2cbfeea87bd23459886cfddd75fc91, type: 3}
+  trap2: {fileID: 3282739756636012120, guid: 5c71d2e19f2e158418b87544245a9dc5, type: 3}
+  trap3: {fileID: 2384453566164145722, guid: 25a03197df5f11d418200d1dfbe3b4bb, type: 3}
   moneyText: {fileID: 358257109}
   batTop: {fileID: 0}
   batLeft: {fileID: 0}
