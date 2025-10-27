@@ -92,6 +92,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //입력받은 게임씬의 이름에 맞춰서 업데이트를 재생
+        if (GameScene == mainMenu)
+        { UpdateMainMenu(); }
         if (GameScene == scene1)
         { UpdateRtanRain(); }
         else if (GameScene == scene2)
@@ -123,6 +125,8 @@ public class GameManager : MonoBehaviour
     { Application.Quit(); }
     //메인매뉴 함수
     void StartMainMenu()
+    { moneyText.text = allMoney.ToString(); }
+    void UpdateMainMenu()
     {
         Debug.Log("뭔가 넣어야지");
     }
