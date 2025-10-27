@@ -126,10 +126,6 @@ public class GameManager : MonoBehaviour
     //메인매뉴 함수
     void StartMainMenu()
     { moneyText.text = allMoney.ToString(); }
-    void UpdateMainMenu()
-    {
-        Debug.Log("뭔가 넣어야지");
-    }
     //부자가 되자용 함수
     void StartRtanRain()//부자가 되자 시작 함수
     {
