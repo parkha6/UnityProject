@@ -62,5 +62,6 @@
 * 바위에셋 : [Rock Sprites by Xenophero](https://xenophero.itch.io/rock-sprites)
 * 가을배경 에셋 : [Free Autumn Pixel Backgrounds for Game](https://craftpix.net/freebies/free-autumn-pixel-backgrounds-for-game/)
 * 상점카트 에셋 : [Medieval Fantasy Shop by Soul_Sire](https://soulcode.itch.io/shop-asset-rpg)
+* 레벨,스테미나바 UI : [RPG UI pack (demo) by Franuka ](https://franuka.itch.io/rpg-ui-pack-demo)
 ### 그 외 자체 제작 에셋
 * 치킨을 꽃아놓은 막대기
