@@ -1,10 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Quit : MonoBehaviour
 {
     public void OnClickQuitButton()
-    {
-        PlayerPrefs.DeleteAll();
-        GameManager.instance.QuitGame();
-    }
+    { SceneManager.LoadScene("MainMenu"); }
 }

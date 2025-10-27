@@ -48,12 +48,8 @@ public class RtanClickMove : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D other)
     {
-        /*
-        if (other.gameObject.CompareTag("Ground"))
-        {*/
         nextPosition = transform.position;
         walkAnimator.SetBool("isWalking", false);
         isMoving = false;
-        /*}*/
     }
 }

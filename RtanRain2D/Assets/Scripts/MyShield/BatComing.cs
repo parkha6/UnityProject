@@ -11,23 +11,23 @@ public class BatComing : MonoBehaviour
     Vector3 targetPosition;
     bool flying = true;
     SpriteRenderer renderer;
-    // Start is called before the first frame update
+    Rigidbody2D rigidbody2D;
+    private void Awake()
+    {
+        renderer = GetComponent<SpriteRenderer>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
+    }
     void Start()
     {
         float x = Random.Range(minRangeX, maxRangeX);
         float y = Random.Range(minRangeY, maxRangeY);
         float size = Random.Range(minSize, maxSize);
-
         transform.position = new Vector3(x, y);
         transform.localScale = new Vector2(size, size);
-        renderer = GetComponent<SpriteRenderer>();
-
-
         Application.targetFrameRate = 60;
         targetPosition = new Vector3(0f, -3.20f);
         flying = true;
     }
-    // Update is called once per frame
     void Update()
     {
         moving();
@@ -45,6 +45,7 @@ public class BatComing : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             flying = false;
+            rigidbody2D.gravityScale = 1;
         }
         else if (other.gameObject.CompareTag("Cooking"))
         {
