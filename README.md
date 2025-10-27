@@ -61,5 +61,6 @@
 * 박쥐에셋 : [Bat Pixel art (FREE) by QuimeraGames](https://quimeragames.itch.io/bat-pixel-art-free)
 * 바위에셋 : [Rock Sprites by Xenophero](https://xenophero.itch.io/rock-sprites)
 * 가을배경 에셋 : [Free Autumn Pixel Backgrounds for Game](https://craftpix.net/freebies/free-autumn-pixel-backgrounds-for-game/)
+* 상점카트 에셋 : [Medieval Fantasy Shop by Soul_Sire](https://soulcode.itch.io/shop-asset-rpg)
 ### 그 외 자체 제작 에셋
 * 치킨을 꽃아놓은 막대기
