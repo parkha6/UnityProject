@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 312534667}
   - component: {fileID: 312534666}
   m_Layer: 5
-  m_Name: FinishMessage 2
+  m_Name: FinishMessage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1115,15 +1115,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ddfaf3f5a804034b96888e1bd5d2bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelText: {fileID: 0}
+  expBar: {fileID: 0}
+  steminaBar: {fileID: 0}
   endUI: {fileID: 1675378521}
   endText: {fileID: 1196907620}
+  showResultText: {fileID: 312534666}
   timeText: {fileID: 0}
   resultText: {fileID: 1819753126}
   GameScene: FlappySurf
   timeWatch: 0
   gameOver: 0
   coin: {fileID: 0}
-  trap: {fileID: 0}
+  trap1: {fileID: 0}
+  trap2: {fileID: 0}
+  trap3: {fileID: 0}
   moneyText: {fileID: 361848633}
   batTop: {fileID: 0}
   batLeft: {fileID: 0}

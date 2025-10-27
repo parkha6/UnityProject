@@ -820,6 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endUI: {fileID: 351933638}
   endText: {fileID: 753103516}
+  showResultText: {fileID: 1982627725}
   timeText: {fileID: 1042137770}
   resultText: {fileID: 1185126100}
   GameScene: RtanRain
@@ -2486,7 +2487,7 @@ GameObject:
   - component: {fileID: 1982627726}
   - component: {fileID: 1982627725}
   m_Layer: 5
-  m_Name: FinishMessage 2
+  m_Name: FinishMessage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

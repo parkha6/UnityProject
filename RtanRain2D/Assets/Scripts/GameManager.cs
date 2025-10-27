@@ -5,6 +5,12 @@ public class GameManager : MonoBehaviour
     //TODO:MyShield 종료키에다가 변수 초기화 함수를 달아놓은 상태임 나중에 지워야 한다.
     public static GameManager instance;
     [SerializeField]
+    Text levelText;
+    [SerializeField]
+    Image expBar;
+    [SerializeField]
+    Image steminaBar;
+    [SerializeField]
     GameObject endUI;//끝났을때 나오는 UI창을 넣는 자리
     [SerializeField]
     Text endText;//끝났을때 표시되는 메세지를 넣는 자리
@@ -73,7 +79,34 @@ public class GameManager : MonoBehaviour
     float surfDistance = 0;
     [SerializeField]
     private float surfSpeed = 0f;
-
+    int level = 1;
+    int currentExp = 0;
+    string levelKey = "userLevel";
+    internal string expKey = "userExp";
+    string steminaKey = "userStemina";
+    internal int CurrentExp
+    {
+        get { return currentExp; }
+        set
+        {
+            if (value <= 0)
+            { value = 0; }
+            currentExp = value;
+        }
+    }
+    int exp { get { return 100 * level; } }
+    int currentStemina = 100;
+    int CurrentStemina
+    {
+        get { return currentStemina; }
+        set
+        {
+            if (value < 0)
+            { value = 0; }
+            currentStemina = value;
+        }
+    }
+    int stemina { get { return 100 * level; } }
     private void Awake()
     {
         Instance();
@@ -85,16 +118,27 @@ public class GameManager : MonoBehaviour
         if (GameScene == mainMenu)
         { StartMainMenu(); }
         else if (GameScene == scene1)
-        { StartRtanRain(); }
+        {
+            SetStemina();
+            StartRtanRain();
+        }
         else if (GameScene == scene2)
-        { StartMyShield(); }
+        {
+            SetStemina();
+            StartMyShield();
+        }
         else if (GameScene == scene3)
-        { StartFlappySurf(); }
+        {
+            SetStemina();
+            StartFlappySurf();
+        }
     }
     void Update()
     {
         //입력받은 게임씬의 이름에 맞춰서 업데이트를 재생
-        if (GameScene == scene1)
+        if (GameScene == mainMenu)
+        { UpdateMainMenu(); }
+        else if (GameScene == scene1)
         { UpdateRtanRain(); }
         else if (GameScene == scene2)
         { UpdateMyShield(); }
@@ -109,10 +153,21 @@ public class GameManager : MonoBehaviour
     }
     void HasKey()//컴에 저장된 변수를 불러오는 함수
     {
+        if (PlayerPrefs.HasKey(levelKey))
+        { level = PlayerPrefs.GetInt(levelKey); }
+        if (PlayerPrefs.HasKey(expKey))
+        { currentExp = PlayerPrefs.GetInt(expKey); }
+        if (PlayerPrefs.HasKey(steminaKey))
+        { currentStemina = PlayerPrefs.GetInt(steminaKey); }
         if (PlayerPrefs.HasKey(firstKey))
         { allMoney = PlayerPrefs.GetInt(firstKey); }
         if (PlayerPrefs.HasKey(secondKey))
         { allChickenAmount = PlayerPrefs.GetInt(secondKey); }
+    }
+    void SetStemina()
+    {
+        --CurrentStemina;
+        PlayerPrefs.SetInt(steminaKey, CurrentStemina);
     }
     void StartAll()//스타트 함수를 시작할때 공통적으로 들어가는 부분
     {
@@ -125,7 +180,24 @@ public class GameManager : MonoBehaviour
     { Application.Quit(); }
     //메인매뉴 함수
     void StartMainMenu()
-    { moneyText.text = allMoney.ToString(); }
+    {
+        moneyText.text = allMoney.ToString();
+        levelText.text = level.ToString();
+    }
+    void UpdateMainMenu()
+    {
+        expBar.fillAmount = (float)currentExp / (float)exp;
+        steminaBar.fillAmount = (float)currentStemina / (float)stemina;
+        if (currentExp >= exp)
+        {//레벨업 이펙트 넣고 싶다
+            currentExp -= exp;
+            ++level;
+            currentStemina = stemina;
+            PlayerPrefs.SetInt(levelKey, level);
+            PlayerPrefs.SetInt(expKey, currentExp);
+            levelText.text = level.ToString();
+        }
+    }
     //부자가 되자용 함수
     void StartRtanRain()//부자가 되자 시작 함수
     {
@@ -305,7 +377,13 @@ public class GameManager : MonoBehaviour
     }
     internal void FlappySurfEnd(string inputMessage)
     {
+        CurrentExp += (int)Mathf.Round(surfDistance * 10);
+        PlayerPrefs.SetInt(expKey, CurrentExp);
         endText.text = inputMessage;
+        if (surfDistance <= 0)
+        { showResultText.text = "Game Over"; }
+        else if (surfDistance > 0)
+        { showResultText.text = "Surf Done"; }
         TimeStop();
         endUI.SetActive(true);
         gameOver = true;

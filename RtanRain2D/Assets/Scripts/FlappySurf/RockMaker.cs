@@ -42,7 +42,6 @@ public class RockMaker : MonoBehaviour
     float landCurrentTime = 0.0f;
     float minHeight = -3.5f;
     float maxHeight = -3.1f;
-    float minWidth = -10.5f;
     float maxWidth = 30f;
     Vector3 location = new Vector3(0f, 0f, 0f);
     Vector3 backgroundLocation = new Vector3(39f, 0f, 0f);
