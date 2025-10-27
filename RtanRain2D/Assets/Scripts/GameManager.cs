@@ -92,8 +92,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //입력받은 게임씬의 이름에 맞춰서 업데이트를 재생
-        if (GameScene == mainMenu)
-        { UpdateMainMenu(); }
         if (GameScene == scene1)
         { UpdateRtanRain(); }
         else if (GameScene == scene2)
