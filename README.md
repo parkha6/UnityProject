@@ -41,6 +41,12 @@
   + 포장마차에 다가가면 구매할 수 있는 음식의 목록이 나옵니다.
     
     ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/Store.jpg)
+  + 가방을 열거나 포장마차의 음식을 구매해서 스테미나를 보충할 수 있습니다.
+    
+    ![예시 스크린샷](https://raw.githubusercontent.com/parkha6/UnityProject/5060a70178306802e54a0a343de861c392d0b506/Capture/ShopNBag.jpg)
+  + 대화하기를 선택하면 말풍선과 함께 랜덤한 대사가 나옵니다.
+      
+    ![예시 스크린샷](https://raw.githubusercontent.com/parkha6/UnityProject/5060a70178306802e54a0a343de861c392d0b506/Capture/Talking.jpg)
 
 ### Debug 버튼 설명
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/DebugButton.jpg?raw=true)
