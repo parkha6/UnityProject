@@ -5,8 +5,8 @@
 * [아이디어 스케치와 메모(figma)](https://www.figma.com/design/sdNSlmYnrTuJmzQBm5uW8c/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=PAP5glTawhADmwMq-0)
   
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/FrameWork.jpg?raw=true)  
-  + 완성된 게임의 모습을 먼저 정하기 위해 대략적인 화면 구성과 게임에 대한 아이디어 등을 작성하고 작업에 시작했습니다.
-  + 만들어 놓은 미니게임 두개가 모바일용이었기 때문에 나머지 메인화면과 미니게임도 모바일용으로 맞춰서 설계했습니다.
+  + 대략적인 화면 구성과 게임에 대한 아이디어 등을 작성하고 작업에 시작했습니다.
+  + 만들어 놓은 미니게임이 모바일용이었기 때문에 나머지도 모바일용으로 맞춰서 설계했습니다.
 * UI배치
   
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/FreeAspect.jpg?raw=true)
