@@ -36,7 +36,7 @@
   
     ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/NoStemina.jpg?raw=true)
 
-  + 스테미나는 포장마차에서 음식을 사거나 구운 통닭을 먹어서 보충 할 수 있게 구성 할 생각이었지만 시간관계로 아직 추가하지 못했습니다.
+  + 스테미나는 포장마차에서 음식을 사거나 구운 통닭을 먹어서 보충 할 수 있게 구성했습니다.
     
     ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/Store.jpg)
     - 또한 레벨업시 스테미나가 가득 차기도 합니다.
