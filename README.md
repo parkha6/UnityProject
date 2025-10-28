@@ -35,11 +35,13 @@
   + 미니게임 입장에는 스테미나를 소모하며 스테미나가 부족하면 경고창이 뜨며 입장이 되지 않습니다.  
   
     ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/NoStemina.jpg?raw=true)
+    - 스테미나는 포장마차에서 음식을 사거나 구운 통닭을 먹어서 보충 할 수 있게 구성했습니다.
+    - 또한 레벨업시 스테미나가 가득 차기도 합니다.
 
-  + 스테미나는 포장마차에서 음식을 사거나 구운 통닭을 먹어서 보충 할 수 있게 구성 할 생각이었지만 시간관계로 아직 추가하지 못했습니다.
+  + 포장마차에 다가가면 구매할 수 있는 음식의 목록이 나옵니다.
     
     ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/Store.jpg)
-    - 또한 레벨업시 스테미나가 가득 차기도 합니다.
+
 ### Debug 버튼 설명
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/DebugButton.jpg?raw=true)
   + MainMenu 씬에 저장된 데이터를 전부 지울 수 있는 버튼을 추가해뒀습니다.
@@ -91,11 +93,13 @@
 * 코인에셋 : [Animated pixel coins by TotusLotus](https://totuslotus.itch.io/pixel-coins)
 * 엄청 큰 해골이랑 뼈 에셋 : [Free Undead Tileset Top Down Pixel Art](https://craftpix.net/freebies/free-undead-tileset-top-down-pixel-art/?num=1&count=52&sq=undead&pos=3)
 * 모닥불 에셋 : [Pixel Campfire FX – 7 Frame Loop by Silas](https://srobinson111.itch.io/pixel-campfire)
-* 치킨에셋 : [Free Pixel foods by ghostpixxells](https://ghostpixxells.itch.io/pixelfood)
+* 음식에셋 : [Free Pixel foods by ghostpixxells](https://ghostpixxells.itch.io/pixelfood)
 * 박쥐에셋 : [Bat Pixel art (FREE) by QuimeraGames](https://quimeragames.itch.io/bat-pixel-art-free)
 * 바위에셋 : [Rock Sprites by Xenophero](https://xenophero.itch.io/rock-sprites)
 * 가을배경 에셋 : [Free Autumn Pixel Backgrounds for Game](https://craftpix.net/freebies/free-autumn-pixel-backgrounds-for-game/)
 * 상점카트 에셋 : [Medieval Fantasy Shop by Soul_Sire](https://soulcode.itch.io/shop-asset-rpg)
 * 레벨,스테미나바 UI : [RPG UI pack (demo) by Franuka ](https://franuka.itch.io/rpg-ui-pack-demo)
+* 가방아이콘 : [Pocket Inventory Series #2 : Pixel Map](https://humblepixel.itch.io/pocket-inventory-series-2-pixel-map)
+* 말풍선 에셋: [Pixel Speech balloon by JustAJoke](https://justajoke.itch.io/pixel-speech-balloon)
 ### 그 외 자체 제작 에셋
 * 치킨을 꽃아놓은 막대기
