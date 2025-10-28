@@ -98,5 +98,6 @@
 * 상점카트 에셋 : [Medieval Fantasy Shop by Soul_Sire](https://soulcode.itch.io/shop-asset-rpg)
 * 레벨,스테미나바 UI : [RPG UI pack (demo) by Franuka ](https://franuka.itch.io/rpg-ui-pack-demo)
 * 가방아이콘 : [Pocket Inventory Series #2 : Pixel Map](https://humblepixel.itch.io/pocket-inventory-series-2-pixel-map)
+* 말풍선 에셋: [Pixel Speech balloon by JustAJoke](https://justajoke.itch.io/pixel-speech-balloon)
 ### 그 외 자체 제작 에셋
 * 치킨을 꽃아놓은 막대기
