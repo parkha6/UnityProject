@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.6, y: -8.8}
-  m_SizeDelta: {x: 707.8, y: 138.6}
+  m_AnchoredPosition: {x: -28.6, y: -9.14}
+  m_SizeDelta: {x: 707.8, y: 126.69}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &5038729487869754008
 CanvasRenderer:
@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 4233034203111854648}
   - component: {fileID: 2079259298143430679}
   - component: {fileID: 8766084270861787245}
-  - component: {fileID: 6908066378407489273}
   m_Layer: 5
   m_Name: FoodName
   m_TagString: Untagged
@@ -236,28 +235,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uC74C\uC2DD\uC774\uB984 \uBB50\uB85C \uD558\uC9C0"
---- !u!114 &6908066378407489273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3113443635459706370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 783d780b68d5f3a4aa961a5860c1a2f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 5642291347227761155}
-  sprite: {fileID: 0}
-  nameText: {fileID: 8766084270861787245}
-  foodName: 
-  describeText: {fileID: 998685730386462615}
-  foodDescribe: 
-  steminaText: {fileID: 8308333290726926666}
-  giveStemina: 0
-  priceText: {fileID: 182945045231840346}
-  foodPrice: 0
 --- !u!1 &4999110410313764256
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,7 +307,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 60
-    m_Alignment: 0
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -348,6 +325,7 @@ GameObject:
   - component: {fileID: 7808157250227285269}
   - component: {fileID: 386405645305991137}
   - component: {fileID: 1645828340107245421}
+  - component: {fileID: 167574783772160432}
   m_Layer: 5
   m_Name: DescribeUI
   m_TagString: Untagged
@@ -419,6 +397,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &167574783772160432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823432931176570822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 783d780b68d5f3a4aa961a5860c1a2f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 5642291347227761155}
+  sprite: {fileID: 0}
+  nameText: {fileID: 8766084270861787245}
+  foodName: 
+  describeText: {fileID: 998685730386462615}
+  foodDescribe: 
+  steminaText: {fileID: 8308333290726926666}
+  giveStemina: 0
+  priceText: {fileID: 182945045231840346}
+  foodPrice: 0
 --- !u!1 &6443057645125731972
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 4
     m_MaxSize: 60
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
