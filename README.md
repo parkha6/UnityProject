@@ -35,12 +35,13 @@
   + 미니게임 입장에는 스테미나를 소모하며 스테미나가 부족하면 경고창이 뜨며 입장이 되지 않습니다.  
   
     ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/NoStemina.jpg?raw=true)
+    - 스테미나는 포장마차에서 음식을 사거나 구운 통닭을 먹어서 보충 할 수 있게 구성했습니다.
+    - 또한 레벨업시 스테미나가 가득 차기도 합니다.
 
   + 포장마차에 다가가면 구매할 수 있는 음식의 목록이 나옵니다.
     
     ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/Store.jpg)
-    - 스테미나는 포장마차에서 음식을 사거나 구운 통닭을 먹어서 보충 할 수 있게 구성했습니다.
-    - 또한 레벨업시 스테미나가 가득 차기도 합니다.
+
 ### Debug 버튼 설명
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/DebugButton.jpg?raw=true)
   + MainMenu 씬에 저장된 데이터를 전부 지울 수 있는 버튼을 추가해뒀습니다.
