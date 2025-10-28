@@ -7,8 +7,6 @@ public class ChangeScene : MonoBehaviour
     [SerializeField]
     private string sceneName;
     [SerializeField]
-    private string currentScene;
-    [SerializeField]
     Button button;
     private void Awake()
     { button.onClick.AddListener(OnClickQuitButton); }
@@ -17,7 +15,7 @@ public class ChangeScene : MonoBehaviour
         if (GameManager.instance.CurrentStemina <= 0 && (sceneName == "RtanRain" || sceneName == "MyShield" || sceneName == "PlaffySurf"))
         {
             GameManager.instance.isReturn = true;
-            if (currentScene == "RtanRain" || currentScene == "MyShield" || currentScene == "PlaffySurf")
+            if (GameManager.instance.gameScene == "RtanRain" || GameManager.instance.gameScene == "MyShield" || GameManager.instance.gameScene == "PlaffySurf")
             { SceneManager.LoadScene("MainMenu"); }
             return; 
         }

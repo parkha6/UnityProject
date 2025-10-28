@@ -4,6 +4,10 @@ using UnityEngine.UI;
  * 스크립트에서 씬 이름을 string으로 입력받아서 씬 이름에 따라서 처리하게 했는데 이러니까 계속 씬 이름을 입력해야 되서 enum을 쓰고 싶지만 어떻게 해야 enum을 사용해 에디터에서 이름을 인식하게 할지 모르겠다.  
  * 변수를 어떤 순서로 나열해야 좋을지 잘 모르겠다.
  * 코드에 입력받는 값 하나 넣은 뒤 스크립트가 들어간 곳을 찾는게 귀찮다.
+ * ReadMe를 수정할때 바로 Main에 올라가니까 브랜치랑 병합할때 다시 메인을 받아야 해서 좀 귀찮다. ReadMe 수정을 바로 Main에다가 올려도 되는건지 모르겠다.
+ * 작업하고 커밋을 올리니 ReadMe를 Main에서 받으니까 작업한게 날라가있어서 놀랐다. 
+ * UI하나 고쳤더니 다른 씬에 있는 똑같은 UI도 고쳐야 되서 귀찮았다. (UI를 프리팹으로 만들면 되려나?)
+ * 모바일 크기에선 잘 나오던 텍스트가 Free Aspect에서는 화질이 깨져서 놀랐다. Free Aspect 해상도의 기준을 잘 모르겠다.
 */
 public enum SceneName //단어 자동완성용 
 {
@@ -36,7 +40,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Text resultText;//끝났을 때 결과값을 표시하는 자리
     [SerializeField]
-    string GameScene;//이 변수에 따라 어떤 코드를 재생할지 결정됨.
+    internal string gameScene;//이 변수에 따라 어떤 코드를 재생할지 결정됨.
     [SerializeField]
     float timeWatch;//시간을 표시하는 변수
     [SerializeField]
@@ -130,19 +134,19 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartAll();
-        if (GameScene == mainMenu)
+        if (gameScene == mainMenu)
         { StartMainMenu(); }
-        else if (GameScene == scene1)
+        else if (gameScene == scene1)
         {
             SetStemina();
             StartRtanRain();
         }
-        else if (GameScene == scene2)
+        else if (gameScene == scene2)
         {
             SetStemina();
             StartMyShield();
         }
-        else if (GameScene == scene3)
+        else if (gameScene == scene3)
         {
             SetStemina();
             StartFlappySurf();
@@ -151,13 +155,13 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //입력받은 게임씬의 이름에 맞춰서 업데이트를 재생
-        if (GameScene == mainMenu)
+        if (gameScene == mainMenu)
         { UpdateMainMenu(); }
-        else if (GameScene == scene1)
+        else if (gameScene == scene1)
         { UpdateRtanRain(); }
-        else if (GameScene == scene2)
+        else if (gameScene == scene2)
         { UpdateMyShield(); }
-        else if (GameScene == scene3)
+        else if (gameScene == scene3)
         { UpdateFlappySurf(); }
     }
     //공용함수
