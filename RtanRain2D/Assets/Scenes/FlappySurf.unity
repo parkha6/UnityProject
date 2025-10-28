@@ -826,6 +826,7 @@ MonoBehaviour:
   expBar: {fileID: 0}
   steminaBar: {fileID: 0}
   warningUi: {fileID: 0}
+  steminaUsed: 10
   endUI: {fileID: 1252032913}
   endText: {fileID: 1252032912}
   showResultText: {fileID: 1252032911}
@@ -851,7 +852,7 @@ MonoBehaviour:
   cookAmountText3: {fileID: 0}
   food: {fileID: 0}
   roastedTimes: 0
-  bagSize: 0
+  bagSize: 999
   surfDistanceText: {fileID: 1747750678}
   surfSpeed: 0.2
 --- !u!1 &599765395

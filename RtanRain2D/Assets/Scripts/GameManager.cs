@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float roastedTimes;//치킨 한마리가 구워지는데 걸리는 시간
     [SerializeField]
-    int bagSize;//한칸 당 들어갈 수 있는 치킨 마리수
+    int bagSize = 999;//한칸 당 들어갈 수 있는 치킨 마리수
     float cookingTime = 0.0f;//고기 한개를 굽기 시작한 시간을 측정하기 위한 변수
     static int allChickenAmount = 0;//지금까지 구운 고기의 수
     int finishedChicken = 0;//이번판에서 구운 고기의 수
@@ -209,6 +209,13 @@ public class GameManager : MonoBehaviour
     {
         expBar.fillAmount = (float)currentExp / (float)exp;
         steminaBar.fillAmount = (float)currentStemina / (float)stemina;
+        Debug.Log(allChickenAmount);
+        if (allChickenAmount <= 0)
+        { cookingText.text = "가방이 비어있다."; }
+        else
+        { cookingText.text = "맛있는 통닭이다."; }
+        ShowChicken();
+        ChickenImageOn();
         if (currentExp >= exp)
         {//레벨업 이펙트 넣고 싶다
             currentExp -= exp;
@@ -320,13 +327,31 @@ public class GameManager : MonoBehaviour
         }
         else if (cookingTime >= 5.0f && cookingTime <= roastedTimes)
         { cookingText.text = ""; }
-
-        if (allChickenAmount == 1)
+        ChickenImageOn();
+    }
+    void ChickenImageOn()
+    {
+        if (allChickenAmount >= 1)
         { chickenImage.SetActive(true); }
-        if (allChickenAmount == bagSize + 1)
+        else if (allChickenAmount <= 0)
+        {
+            chickenImage.SetActive(false);
+            cookAmountText.text = "";
+        }
+        if (allChickenAmount >= bagSize + 1)
         { chickenImage2.SetActive(true); }
-        if (allChickenAmount == bagSize * 2 + 1)
+        else if (allChickenAmount <= bagSize)
+        {
+            chickenImage2.SetActive(false);
+            cookAmountText2.text = "";
+        }
+        if (allChickenAmount >= bagSize * 2 + 1)
         { chickenImage3.SetActive(true); }
+        else if (allChickenAmount <= bagSize * 2)
+        {
+            chickenImage3.SetActive(false);
+            cookAmountText3.text = "";
+        }
     }
     void ShowChicken()//치킨수를 인벤창에 보여주는 함수
     {
