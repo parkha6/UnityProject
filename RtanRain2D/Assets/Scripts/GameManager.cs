@@ -89,11 +89,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float roastedTimes;//치킨 한마리가 구워지는데 걸리는 시간
     [SerializeField]
-    int bagSize = 999;//한칸 당 들어갈 수 있는 치킨 마리수
+    internal int bagSize = 999;//한칸 당 들어갈 수 있는 치킨 마리수
     float cookingTime = 0.0f;//고기 한개를 굽기 시작한 시간을 측정하기 위한 변수
-    static int allChickenAmount = 0;//지금까지 구운 고기의 수
+    internal static int allChickenAmount = 0;//지금까지 구운 고기의 수
     int finishedChicken = 0;//이번판에서 구운 고기의 수
-    string secondKey = "userChickenAmount";//영구적으로 저장되는 고기 변수 이름
+    internal string secondKey = "userChickenAmount";//영구적으로 저장되는 고기 변수 이름
     string scene3 = "FlappySurf";
     [SerializeField]
     Text surfDistanceText;
@@ -115,7 +115,7 @@ public class GameManager : MonoBehaviour
             currentExp = value;
         }
     }
-    int exp { get { return 100 * level; } }
+    internal int Exp { get { return 100 * level; } }
     int currentStemina = 100;
     internal int CurrentStemina
     {
@@ -207,7 +207,7 @@ public class GameManager : MonoBehaviour
     }
     void UpdateMainMenu()
     {
-        expBar.fillAmount = (float)currentExp / (float)exp;
+        expBar.fillAmount = (float)currentExp / (float)Exp;
         steminaBar.fillAmount = (float)currentStemina / (float)stemina;
         Debug.Log(allChickenAmount);
         if (allChickenAmount <= 0)
@@ -216,9 +216,9 @@ public class GameManager : MonoBehaviour
         { cookingText.text = "맛있는 통닭이다."; }
         ShowChicken();
         ChickenImageOn();
-        if (currentExp >= exp)
+        if (currentExp >= Exp)
         {//레벨업 이펙트 넣고 싶다
-            currentExp -= exp;
+            currentExp -= Exp;
             ++level;
             currentStemina = stemina;
             PlayerPrefs.SetInt(levelKey, level);
