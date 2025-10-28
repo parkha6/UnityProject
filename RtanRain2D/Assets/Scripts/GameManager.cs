@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
     Image steminaBar;
     [SerializeField]
     GameObject warningUi;//스테미나 없을 때 나오는 창
+    [SerializeField]
+    internal int steminaUsed = 10;
     internal bool isReturn = false;
     [SerializeField]
     GameObject endUI;//끝났을때 나오는 UI창을 넣는 자리
@@ -185,7 +187,7 @@ public class GameManager : MonoBehaviour
     }
     void SetStemina()
     {
-        --CurrentStemina;
+        CurrentStemina -= steminaUsed;
         PlayerPrefs.SetInt(steminaKey, CurrentStemina);
     }
     void StartAll()//스타트 함수를 시작할때 공통적으로 들어가는 부분
@@ -219,7 +221,7 @@ public class GameManager : MonoBehaviour
         if (isReturn)
         {
             warningUi.SetActive(true);
-            isReturn = false; 
+            isReturn = false;
         }
     }
     //부자가 되자용 함수

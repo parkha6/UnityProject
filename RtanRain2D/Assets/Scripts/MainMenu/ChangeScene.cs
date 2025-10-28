@@ -12,7 +12,7 @@ public class ChangeScene : MonoBehaviour
     { button.onClick.AddListener(OnClickQuitButton); }
     public void OnClickQuitButton()
     {
-        if (GameManager.instance.CurrentStemina <= 0 && (sceneName == "RtanRain" || sceneName == "MyShield" || sceneName == "PlaffySurf"))
+        if (GameManager.instance.CurrentStemina <GameManager.instance.steminaUsed && (sceneName == "RtanRain" || sceneName == "MyShield" || sceneName == "PlaffySurf"))
         {
             GameManager.instance.isReturn = true;
             if (GameManager.instance.gameScene == "RtanRain" || GameManager.instance.gameScene == "MyShield" || GameManager.instance.gameScene == "PlaffySurf")
