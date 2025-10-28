@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MyShield.unity
-    guid: 25e3de314f8633b4485af49c97ddf4a6
+    path: Assets/Scenes/MainMenu.unity
+    guid: dc05f976bb190a04cbc12fd24744aa46
   - enabled: 1
     path: Assets/Scenes/RtanRain.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MyShield.unity
+    guid: 25e3de314f8633b4485af49c97ddf4a6
+  - enabled: 1
+    path: Assets/Scenes/FlappySurf.unity
+    guid: 6f23372755fcbe241b13ceef6c7d8229
   m_configObjects: {}

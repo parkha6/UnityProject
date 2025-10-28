@@ -612,10 +612,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 391440065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9cc2d1cfbabf5409217651d60c5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b09b16298dd363499868046a026557a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: RtanRain
+  button: {fileID: 391440068}
 --- !u!114 &391440068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,19 +660,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 391440070}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 391440067}
-        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
-        m_MethodName: RetryGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!222 &391440069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -831,13 +820,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endUI: {fileID: 351933638}
   endText: {fileID: 753103516}
+  showResultText: {fileID: 1982627725}
   timeText: {fileID: 1042137770}
   resultText: {fileID: 1185126100}
   GameScene: RtanRain
   timeWatch: 50
   gameOver: 0
   coin: {fileID: 4885436350602115947, guid: c0a9fdd92cd23c84eaa060b692c6eb75, type: 3}
-  trap: {fileID: 6790856187481688661, guid: d155fcb580df6ab4e8f141016f02f654, type: 3}
+  trap1: {fileID: 4231167972305877608, guid: 2b2cbfeea87bd23459886cfddd75fc91, type: 3}
+  trap2: {fileID: 3282739756636012120, guid: 5c71d2e19f2e158418b87544245a9dc5, type: 3}
+  trap3: {fileID: 2384453566164145722, guid: 25a03197df5f11d418200d1dfbe3b4bb, type: 3}
   moneyText: {fileID: 358257109}
   batTop: {fileID: 0}
   batLeft: {fileID: 0}
@@ -2033,19 +2025,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1444988633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1444988634}
-        m_TargetAssemblyTypeName: Quit, Assembly-CSharp
-        m_MethodName: OnClickQuitButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!222 &1444988632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2096,6 +2076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b09b16298dd363499868046a026557a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: MainMenu
+  button: {fileID: 1444988631}
 --- !u!1 &1738253338
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,19 +2422,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1884634343}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1884634345}
-        m_TargetAssemblyTypeName: Retry, Assembly-CSharp
-        m_MethodName: RetryGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1884634343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2500,10 +2470,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1884634339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9cc2d1cfbabf5409217651d60c5d26, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b09b16298dd363499868046a026557a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: RtanRain
+  button: {fileID: 1884634342}
 --- !u!1 &1982627723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,7 +2487,7 @@ GameObject:
   - component: {fileID: 1982627726}
   - component: {fileID: 1982627725}
   m_Layer: 5
-  m_Name: FinishMessage 2
+  m_Name: FinishMessage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

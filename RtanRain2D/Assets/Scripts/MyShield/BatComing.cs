@@ -11,23 +11,23 @@ public class BatComing : MonoBehaviour
     Vector3 targetPosition;
     bool flying = true;
     SpriteRenderer renderer;
-    // Start is called before the first frame update
+    Rigidbody2D rigidbody2D;
+    private void Awake()
+    {
+        renderer = GetComponent<SpriteRenderer>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
+    }
     void Start()
     {
         float x = Random.Range(minRangeX, maxRangeX);
         float y = Random.Range(minRangeY, maxRangeY);
         float size = Random.Range(minSize, maxSize);
-
         transform.position = new Vector3(x, y);
         transform.localScale = new Vector2(size, size);
-        renderer = GetComponent<SpriteRenderer>();
-
-
         Application.targetFrameRate = 60;
         targetPosition = new Vector3(0f, -3.20f);
         flying = true;
     }
-    // Update is called once per frame
     void Update()
     {
         moving();
@@ -44,11 +44,17 @@ public class BatComing : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            ++GameManager.instance.CurrentExp;
+            PlayerPrefs.SetInt(GameManager.instance.expKey,GameManager.instance.CurrentExp);
             flying = false;
+            rigidbody2D.gravityScale = 1;
         }
         else if (other.gameObject.CompareTag("Cooking"))
         {
-            GameManager.instance.MyShieldEnd("박쥐가 통닭을 먹어버렸어요.");
+            if (flying)
+            { GameManager.instance.MyShieldEnd("박쥐가 통닭을 먹어버렸습니다."); }
+            else if (!flying)
+            { GameManager.instance.MyShieldEnd("박쥐가 통닭에 떨어졌습니다."); }
         }
     }
     void FacedDirection()

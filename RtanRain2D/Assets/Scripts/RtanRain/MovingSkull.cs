@@ -5,9 +5,7 @@ public class MovingSkull : MonoBehaviour
     bool right = false;
     // Start is called before the first frame update
     void Start()
-    {
-        Application.targetFrameRate = 60;
-    }
+    { Application.targetFrameRate = 60; }
 
     // Update is called once per frame
     void Update()
@@ -19,24 +17,16 @@ public class MovingSkull : MonoBehaviour
             if (right)
             {
                 if (transform.position.x >= 0.3f)
-                {
-                    right = false;
-                }
+                { right = false; }
                 else
-                {
-                    transform.position += Vector3.right * 0.005f;
-                }
+                { transform.position += Vector3.right * 0.005f; }
             }
             else if (right != true)
             {
                 if (transform.position.x <= -0.3f)
-                {
-                    right = true;
-                }
+                { right = true; }
                 else
-                {
-                    transform.position += Vector3.left * 0.005f;
-                }
+                { transform.position += Vector3.left * 0.005f; }
             }
         }
     }
