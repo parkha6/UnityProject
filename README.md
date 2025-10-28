@@ -5,8 +5,8 @@
 * [아이디어 스케치와 메모(figma)](https://www.figma.com/design/sdNSlmYnrTuJmzQBm5uW8c/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=PAP5glTawhADmwMq-0)
   
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/FrameWork.jpg?raw=true)  
-  + 완성된 게임의 모습을 먼저 정하기 위해 대략적인 화면 구성과 게임에 대한 아이디어 등을 작성하고 작업에 시작했습니다.
-  + 만들어 놓은 미니게임 두개가 모바일용이었기 때문에 나머지 메인화면과 미니게임도 모바일용으로 맞춰서 설계했습니다.
+  + 대략적인 화면 구성과 게임에 대한 아이디어 등을 작성하고 작업에 시작했습니다.
+  + 만들어 놓은 미니게임이 모바일용이었기 때문에 나머지도 모바일용으로 맞춰서 설계했습니다.
 * UI배치
   
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/FreeAspect.jpg?raw=true)
@@ -41,6 +41,12 @@
   + 포장마차에 다가가면 구매할 수 있는 음식의 목록이 나옵니다.
     
     ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/Store.jpg)
+  + 가방을 열거나 포장마차의 음식을 구매해서 스테미나를 보충할 수 있습니다.
+    
+    ![예시 스크린샷](https://raw.githubusercontent.com/parkha6/UnityProject/5060a70178306802e54a0a343de861c392d0b506/Capture/ShopNBag.jpg)
+  + 대화하기를 선택하면 말풍선과 함께 랜덤한 대사가 나옵니다.
+      
+    ![예시 스크린샷](https://raw.githubusercontent.com/parkha6/UnityProject/5060a70178306802e54a0a343de861c392d0b506/Capture/Talking.jpg)
 
 ### Debug 버튼 설명
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/DebugButton.jpg?raw=true)
