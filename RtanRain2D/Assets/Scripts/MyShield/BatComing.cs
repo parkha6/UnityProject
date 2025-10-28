@@ -44,8 +44,8 @@ public class BatComing : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            ++GameManager.instance.CurrentExp;
-            PlayerPrefs.SetInt(GameManager.instance.expKey,GameManager.instance.CurrentExp);
+            ++GameManager.CurrentExp;
+            PlayerPrefs.SetInt(GameManager.instance.expKey,GameManager.CurrentExp);
             flying = false;
             rigidbody2D.gravityScale = 1;
         }

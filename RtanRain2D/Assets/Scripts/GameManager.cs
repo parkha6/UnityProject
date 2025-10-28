@@ -60,9 +60,9 @@ public class GameManager : MonoBehaviour
     GameObject trap3;//뼈 오브젝트
     [SerializeField]
     Text moneyText;//은행계좌 잔액 표시용 텍스트
-    static int allMoney;//지금까지 모은 돈의 액수
+    internal static int allMoney;//지금까지 모은 돈의 액수
     int getMoney;//이번판에서 모은 돈의 액수
-    string firstKey = "userMoneyAmount";//영구적으로 저장되는 소지금 변수 이름
+    internal string firstKey = "userMoneyAmount";//영구적으로 저장되는 소지금 변수 이름
     string scene2 = "MyShield";//여기서부터 고기를 지켜라 용 변수.
     [SerializeField]
     GameObject batTop;//위에서 오는 박쥐 오브젝트
@@ -100,12 +100,12 @@ public class GameManager : MonoBehaviour
     float surfDistance = 0;
     [SerializeField]
     private float surfSpeed = 0f;
-    int level = 1;
-    int currentExp = 0;
+    static int level = 1;
+    static int currentExp = 0;
     string levelKey = "userLevel";
     internal string expKey = "userExp";
-    string steminaKey = "userStemina";
-    internal int CurrentExp
+    internal string steminaKey = "userStemina";
+    internal static int CurrentExp
     {
         get { return currentExp; }
         set
@@ -115,9 +115,9 @@ public class GameManager : MonoBehaviour
             currentExp = value;
         }
     }
-    internal int Exp { get { return 100 * level; } }
-    int currentStemina = 100;
-    internal int CurrentStemina
+    internal static int Exp { get { return 100 * level; } }
+    static int currentStemina = 100;
+    internal static int CurrentStemina
     {
         get { return currentStemina; }
         set
@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
             currentStemina = value;
         }
     }
-    int stemina { get { return 100 * level; } }
+    internal static int Stemina { get { return 100 * level; } }
     private void Awake()
     {
         Instance();
@@ -208,7 +208,7 @@ public class GameManager : MonoBehaviour
     void UpdateMainMenu()
     {
         expBar.fillAmount = (float)currentExp / (float)Exp;
-        steminaBar.fillAmount = (float)currentStemina / (float)stemina;
+        steminaBar.fillAmount = (float)currentStemina / (float)Stemina;
         Debug.Log(allChickenAmount);
         if (allChickenAmount <= 0)
         { cookingText.text = "가방이 비어있다."; }
@@ -220,7 +220,7 @@ public class GameManager : MonoBehaviour
         {//레벨업 이펙트 넣고 싶다
             currentExp -= Exp;
             ++level;
-            currentStemina = stemina;
+            currentStemina = Stemina;
             PlayerPrefs.SetInt(levelKey, level);
             PlayerPrefs.SetInt(expKey, currentExp);
             levelText.text = level.ToString();

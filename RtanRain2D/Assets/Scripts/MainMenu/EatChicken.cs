@@ -27,26 +27,26 @@ public class EatChicken : MonoBehaviour
         switch (ChickenNum)
         {
             case 1:
-                if (GameManager.allChickenAmount > 0 && GameManager.instance.CurrentExp < GameManager.instance.Exp)
+                if (GameManager.allChickenAmount > 0 && GameManager.CurrentExp < GameManager.Exp)
                 {
                         --GameManager.allChickenAmount;
-                    GameManager.instance.CurrentExp += 10;
+                    GameManager.CurrentExp += 10;
                     PlayerPrefs.SetInt(GameManager.instance.secondKey, GameManager.allChickenAmount);
                 }
                 break;
             case 2:
-                if (GameManager.allChickenAmount > GameManager.instance.bagSize && GameManager.instance.CurrentExp < GameManager.instance.Exp)
+                if (GameManager.allChickenAmount > GameManager.instance.bagSize && GameManager.CurrentExp < GameManager.Exp)
                 {
                     --GameManager.allChickenAmount;
-                    GameManager.instance.CurrentExp += 10;
+                    GameManager.CurrentExp += 10;
                     PlayerPrefs.SetInt(GameManager.instance.secondKey, GameManager.allChickenAmount);
                 }
                 break;
             case 3:
-                if (GameManager.allChickenAmount > GameManager.instance.bagSize * 2 && GameManager.instance.CurrentExp < GameManager.instance.Exp)
+                if (GameManager.allChickenAmount > GameManager.instance.bagSize * 2 && GameManager.CurrentExp < GameManager.Exp)
                 {
                     --GameManager.allChickenAmount;
-                    GameManager.instance.CurrentExp += 10;
+                    GameManager.CurrentExp += 10;
                     PlayerPrefs.SetInt(GameManager.instance.secondKey, GameManager.allChickenAmount);
                 }
                 break;
