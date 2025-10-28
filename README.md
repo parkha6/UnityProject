@@ -1,21 +1,32 @@
-# 르탄이 메타버스 과제
+# 스파르타 메타버스 만들기
 ## 프로젝트 설명
-유니티로 자유롭게 돌아다닐 수 있고 미니게임이 여러개 있는 앱을 제작
+유니티를 활용해 자유롭게 돌아다닐 수 있고 미니게임이 여러개 있는 앱을 제작
 ## 프레임 워크 구상
-* [아이디어 스케치와 메모(figma)](https://www.figma.com/design/sdNSlmYnrTuJmzQBm5uW8c/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=PAP5glTawhADmwMq-0)  
+* [아이디어 스케치와 메모(figma)](https://www.figma.com/design/sdNSlmYnrTuJmzQBm5uW8c/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?node-id=0-1&p=f&t=PAP5glTawhADmwMq-0)
   
+  ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/FrameWork.jpg?raw=true)  
   + 완성된 게임의 모습을 먼저 정하기 위해 대략적인 화면 구성과 게임에 대한 아이디어 등을 작성하고 작업에 시작했습니다.
   + 만들어 놓은 미니게임 두개가 모바일용이었기 때문에 나머지 메인화면과 미니게임도 모바일용으로 맞춰서 설계했습니다.
-* UI배치 설명
+* UI배치
   
-  ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/FreeAspect.jpg?raw=true)  
+  ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/FreeAspect.jpg?raw=true)
+  
   + 모든 씬은 화면비가 바뀌어도 크게 이상해지지 않도록 UI가 배치되었습니다.
   + 이렇게 해두면 나중에 다른 플랫폼에 이식할 일이 생길 때 편하지 않을까 생각했습니다.  
 ## 메인화면 설명
-들어가면 기본적으로 보이는 씬에 관한 설명입니다.  
+* 들어가면 기본적으로 보이는 씬에 관한 설명입니다.  
+  + 아이디어 스케치
+      
+    ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/MainMenuIdeaSketch.jpg?raw=true)  
+  + 메인화면 배치
   
-  + 모바일 환경에 맞춰서 클릭하면 해당 방향으로 움직여 맵을 돌아다닐 수 있게 만들었습니다.
-  + 서핑을 하거나 박쥐를 잡을때 경험치가 쌓이고 메인화면에서 레벨업하게 하여 미니게임을 지속할 수 있는 이유를 부여하고자 했습니다. 
+    ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/MainMenuFullShot.jpg?raw=true)
+  + 인게임 스크린샷
+
+    ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/MainMenu.jpg?raw=true)  
+    - 플레이어의 스프라이트 모양과 어울리도록 횡스크롤의 형태로 화면을 만들었습니다.
+    - 모바일 환경과 맞도록 클릭으로 맵을 돌아다닐 수 있게 만들었습니다.
+    - 서핑을 하거나 박쥐를 잡을때 경험치가 쌓이고 메인화면에서 레벨업하게 하여 미니게임을 지속할 수 있는 이유를 부여하고자 했습니다. 
   
   + 맵 곳곳에 있는 오브젝트에 가까이 가면 미니게임에 입장할 수 있는 UI가 뜹니다.  
   
@@ -27,8 +38,8 @@
 
   + 스테미나는 포장마차에서 음식을 사거나 구운 통닭을 먹어서 보충 할 수 있게 구성 할 생각이었지만 시간관계로 아직 추가하지 못했습니다.
     
-  ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/Store.jpg)
-  + 또한 레벨업시 스테미나가 가득 차기도 합니다.
+    ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/Store.jpg)
+    - 또한 레벨업시 스테미나가 가득 차기도 합니다.
 ### Debug 버튼 설명
   ![예시 스크린샷](https://github.com/parkha6/UnityProject/blob/main/Capture/DebugButton.jpg?raw=true)
   + MainMenu 씬에 저장된 데이터를 전부 지울 수 있는 버튼을 추가해뒀습니다.
