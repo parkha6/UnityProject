@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RtanClickMove : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class RtanClickMove : MonoBehaviour
     }
     void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            Debug.Log("UI를 클릭했습니다. 캐릭터 이동을 막습니다.");
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 screenPosition = Input.mousePosition;
