@@ -1,5 +1,17 @@
 using UnityEngine;
 using UnityEngine.UI;
+/* 어려운 부분
+ * 스크립트에서 씬 이름을 string으로 입력받아서 씬 이름에 따라서 처리하게 했는데 이러니까 계속 씬 이름을 입력해야 되서 enum을 쓰고 싶지만 어떻게 해야 enum을 사용해 에디터에서 이름을 인식하게 할지 모르겠다.  
+ * 변수를 어떤 순서로 나열해야 좋을지 잘 모르겠다.
+ * 코드에 입력받는 값 하나 넣은 뒤 스크립트가 들어간 곳을 찾는게 귀찮다.
+*/
+public enum SceneName //단어 자동완성용 
+{
+    MainMenu,
+    RtanRain,
+    MyShield,
+    FlappySurf
+}
 public class GameManager : MonoBehaviour
 {
     //TODO:MyShield 종료키에다가 변수 초기화 함수를 달아놓은 상태임 나중에 지워야 한다.
@@ -10,6 +22,9 @@ public class GameManager : MonoBehaviour
     Image expBar;
     [SerializeField]
     Image steminaBar;
+    [SerializeField]
+    GameObject warningUi;//스테미나 없을 때 나오는 창
+    internal bool isReturn = false;
     [SerializeField]
     GameObject endUI;//끝났을때 나오는 UI창을 넣는 자리
     [SerializeField]
@@ -96,7 +111,7 @@ public class GameManager : MonoBehaviour
     }
     int exp { get { return 100 * level; } }
     int currentStemina = 100;
-    int CurrentStemina
+    internal int CurrentStemina
     {
         get { return currentStemina; }
         set
@@ -196,6 +211,11 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt(levelKey, level);
             PlayerPrefs.SetInt(expKey, currentExp);
             levelText.text = level.ToString();
+        }
+        if (isReturn)
+        {
+            warningUi.SetActive(true);
+            isReturn = false; 
         }
     }
     //부자가 되자용 함수
