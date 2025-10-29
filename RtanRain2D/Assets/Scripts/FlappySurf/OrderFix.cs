@@ -1,22 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
-
-public class OrderFix : MonoBehaviour
+public class OrderFix : MonoBehaviour//바위가 생성될때 Y좌표에 따라 스프라이트 표시순서를 바꾸는 클래스.
 {
     float rtanHeight = -3.33f;
     SpriteRenderer sortingRender;
     private void Awake()
-    {
-        sortingRender = GetComponent<SpriteRenderer>();
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    { sortingRender = GetComponent<SpriteRenderer>(); }
     // Update is called once per frame
     void Update()
     {

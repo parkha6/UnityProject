@@ -1,5 +1,5 @@
 using UnityEngine;
-public class Shield : MonoBehaviour
+public class Shield : MonoBehaviour//커서 위치에 따라 보는 방향을 정하는 클래스입니다.
 {
     SpriteRenderer renderer;
     private void Awake()

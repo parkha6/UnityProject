@@ -1,10 +1,5 @@
-using RtanMetaverse;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-
-public class RockMoving : MonoBehaviour
+public class RockMoving : MonoBehaviour//바위의 움직임을 결정하는 클래스. 필요없어졌었나? 판단이 안됨.
 {
     [SerializeField]
     float rockSpeed = 4f;

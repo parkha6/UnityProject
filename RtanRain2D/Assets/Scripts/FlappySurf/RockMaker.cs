@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class RockMaker : MonoBehaviour
+public class RockMaker : MonoBehaviour//바위를 랜덤 생성하는 클래스.
 {
     [SerializeField]
     private GameObject cloudPrefab;
@@ -30,7 +27,6 @@ public class RockMaker : MonoBehaviour
     private GameObject rock10;
     [SerializeField]
     private GameObject rock11;
-
     [SerializeField]
     private float revealTime = 1.0f;
     [SerializeField]
@@ -45,7 +41,6 @@ public class RockMaker : MonoBehaviour
     float maxWidth = 30f;
     Vector3 location = new Vector3(0f, 0f, 0f);
     Vector3 backgroundLocation = new Vector3(39f, 0f, 0f);
-    // Update is called once per frame
     void Update()
     {
         currentTime += Time.deltaTime;

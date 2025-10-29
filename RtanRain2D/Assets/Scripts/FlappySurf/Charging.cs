@@ -1,9 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
-using RtanMetaverse;
 namespace RtanMetaverse
 {
-    public class Charging : MonoBehaviour
+    public class Charging : MonoBehaviour//길게 누를때 점프력을 결정하는 클래스
     {
         private Image energeBar;
         private RtanSurf rtanSurf;

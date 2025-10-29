@@ -1,8 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
-public class ChangeScene : MonoBehaviour
+public class ChangeScene : MonoBehaviour//씬을 바꾸는 클래스
 {
     [SerializeField]
     private string sceneName;

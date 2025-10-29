@@ -1,14 +1,5 @@
 using UnityEngine;
 using UnityEngine.UI;
-/* 어려운 부분
- * 스크립트에서 씬 이름을 string으로 입력받아서 씬 이름에 따라서 처리하게 했는데 이러니까 계속 씬 이름을 입력해야 되서 enum을 쓰고 싶지만 어떻게 해야 enum을 사용해 에디터에서 이름을 인식하게 할지 모르겠다.  
- * 변수를 어떤 순서로 나열해야 좋을지 잘 모르겠다.
- * 코드에 입력받는 값 하나 넣은 뒤 스크립트가 들어간 곳을 찾는게 귀찮다.
- * ReadMe를 수정할때 바로 Main에 올라가니까 브랜치랑 병합할때 다시 메인을 받아야 해서 좀 귀찮다. ReadMe 수정을 바로 Main에다가 올려도 되는건지 모르겠다.
- * 작업하고 커밋을 올리니 ReadMe를 Main에서 받으니까 작업한게 날라가있어서 놀랐다. 
- * UI하나 고쳤더니 다른 씬에 있는 똑같은 UI도 고쳐야 되서 귀찮았다. (UI를 프리팹으로 만들면 되려나?)
- * 모바일 크기에선 잘 나오던 텍스트가 Free Aspect에서는 화질이 깨져서 놀랐다. Free Aspect 해상도의 기준을 잘 모르겠다.
-*/
 public enum SceneName //단어 자동완성용 
 {
     MainMenu,
@@ -16,27 +7,27 @@ public enum SceneName //단어 자동완성용
     MyShield,
     FlappySurf
 }
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour//게임안의 변수나 씬의 전환, 씬의 기능을 관리하는 클래스입니다.
 {
     //TODO:MyShield 종료키에다가 변수 초기화 함수를 달아놓은 상태임 나중에 지워야 한다.
     public static GameManager instance;
     [SerializeField]
-    Text levelText;
+    Text levelText;//메인화면의 레벨표시
     [SerializeField]
-    Image expBar;
+    Image expBar;//메인화면의 경험치 바 표시
     [SerializeField]
-    Image steminaBar;
+    Image steminaBar;//메인화면의 스테미나 바 표시
     [SerializeField]
     GameObject warningUi;//스테미나 없을 때 나오는 창
     [SerializeField]
-    internal int steminaUsed = 10;
-    internal bool isReturn = false;
+    internal int steminaUsed = 10;//스테이지에 들어갈때 사용하는 스테미나 양
+    internal bool isReturn = false;//만약 스테미나가 없어서 메인화면으로 리턴될때 체크되는 불리언.
     [SerializeField]
     GameObject endUI;//끝났을때 나오는 UI창을 넣는 자리
     [SerializeField]
     Text endText;//끝났을때 표시되는 메세지를 넣는 자리
     [SerializeField]
-    Text showResultText;
+    Text showResultText;//게임오버인지 성공인지 표시하는 메세지를 넣는 자리
     [SerializeField]
     Text timeText;//시간을 표시하는 텍스트를 넣는 자리
     [SerializeField]
@@ -96,15 +87,15 @@ public class GameManager : MonoBehaviour
     internal string secondKey = "userChickenAmount";//영구적으로 저장되는 고기 변수 이름
     string scene3 = "FlappySurf";
     [SerializeField]
-    Text surfDistanceText;
-    float surfDistance = 0;
+    Text surfDistanceText;//서핑거리 표시용 텍스트
+    float surfDistance = 0;//총 서핑거리 함수
     [SerializeField]
-    private float surfSpeed = 0f;
-    static int level = 1;
-    static int currentExp = 0;
-    string levelKey = "userLevel";
-    internal string expKey = "userExp";
-    internal string steminaKey = "userStemina";
+    private float surfSpeed = 0f;//서핑속도
+    static int level = 1;//레벨함수
+    static int currentExp = 0;//현재 경험치
+    string levelKey = "userLevel";//레벨 변수 저장용 키값
+    internal string expKey = "userExp";//경험치 변수 저장용 키값
+    internal string steminaKey = "userStemina";//스테미나 변수저장용 키값
     internal static int CurrentExp
     {
         get { return currentExp; }
@@ -128,12 +119,12 @@ public class GameManager : MonoBehaviour
         }
     }
     internal static int Stemina { get { return 100 * level; } }
-    private void Awake()
+    private void Awake()//인스턴스를 생성하고 저장된 변수를 불러오는 부분.
     {
         Instance();
         HasKey();
     }
-    void Start()
+    void Start()//입력받은 게임씬에 맞춰서 초기세팅.
     {
         StartAll();
         if (gameScene == mainMenu)
@@ -185,7 +176,7 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.HasKey(secondKey))
         { allChickenAmount = PlayerPrefs.GetInt(secondKey); }
     }
-    void SetStemina()
+    void SetStemina()//미니게임에 들어갈때 스테미나를 깎는 부분.
     {
         CurrentStemina -= steminaUsed;
         PlayerPrefs.SetInt(steminaKey, CurrentStemina);
@@ -200,12 +191,12 @@ public class GameManager : MonoBehaviour
     internal void QuitGame()//게임을 끝내는 함수
     { Application.Quit(); }
     //메인매뉴 함수
-    void StartMainMenu()
+    void StartMainMenu()//메인씬 시작부분
     {
         moneyText.text = allMoney.ToString();
         levelText.text = level.ToString();
     }
-    void UpdateMainMenu()
+    void UpdateMainMenu()//메인씬 업데이트 부분
     {
         expBar.fillAmount = (float)currentExp / (float)Exp;
         steminaBar.fillAmount = (float)currentStemina / (float)Stemina;

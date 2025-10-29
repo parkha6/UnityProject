@@ -1,5 +1,5 @@
 using UnityEngine;
-public class BatComing : MonoBehaviour
+public class BatComing : MonoBehaviour//박쥐가 움직이는 로직을 정하는 클래스입니다.
 {
     public float minRangeX;
     public float maxRangeX;
