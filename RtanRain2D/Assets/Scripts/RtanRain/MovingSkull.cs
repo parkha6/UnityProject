@@ -1,6 +1,5 @@
 using UnityEngine;
-
-public class MovingSkull : MonoBehaviour
+public class MovingSkull : MonoBehaviour//화면 상단의 해골이 좌우로 움직이게 하는 클래스입니다.
 {
     bool right = false;
     // Start is called before the first frame update

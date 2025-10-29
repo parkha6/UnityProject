@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class EatChicken : MonoBehaviour
+public class EatChicken : MonoBehaviour//메인화면에서 인벤토리를 클릭하면 치킨을 먹게 하는 클래스
 {
     [SerializeField]
     Button button;
@@ -53,6 +50,5 @@ public class EatChicken : MonoBehaviour
             default:
                 break;
         }
-
     }
 }

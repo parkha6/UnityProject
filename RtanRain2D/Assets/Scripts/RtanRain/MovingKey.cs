@@ -1,6 +1,5 @@
 using UnityEngine;
-
-public class MovingKey : MonoBehaviour
+public class MovingKey : MonoBehaviour//마우스키가 입력될 때 마다 르탄이가 걷는 방향이 바뀌게 하는 클래스입니다.
 {
     float speed = 0.03f;
     bool right = true;
@@ -28,9 +27,7 @@ public class MovingKey : MonoBehaviour
 
                 }
                 else
-                {
-                    Move(Vector3.right, speed);
-                }
+                { Move(Vector3.right, speed); }
             }
             else
             {
@@ -40,16 +37,10 @@ public class MovingKey : MonoBehaviour
                     right = true;
                 }
                 else
-                {
-                    Move(Vector3.left, speed);
-                }
+                { Move(Vector3.left, speed); }
             }
         }
     }
-
     void Move(Vector3 direction, float inputSpeed)
-    {
-        transform.position += direction * inputSpeed;
-
-    }
+    { transform.position += direction * inputSpeed; }
 }

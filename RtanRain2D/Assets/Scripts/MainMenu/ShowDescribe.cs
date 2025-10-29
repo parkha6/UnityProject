@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class ShowDescribe : MonoBehaviour
+public class ShowDescribe : MonoBehaviour//상점에서 음식 아이콘을 클릭했을때 설명이 나오게 하는 클래스입니다.
 {
     [SerializeField]
     GameObject describeUi;

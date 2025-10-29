@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-
-public class RockNCoinMoving : MonoBehaviour
+public class RockNCoinMoving : MonoBehaviour//바위와 돌의 움직임을 결정하는 클래스
 {
     [SerializeField]
     GameObject coinPrefab;
@@ -21,7 +17,6 @@ public class RockNCoinMoving : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.left * rockNCoinSpeed * Time.deltaTime;
-
         if (transform.position.x <= -11.5f)
         { Destroy(gameObject); }
     }

@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-
-public class FoodDescribe : MonoBehaviour
+public class FoodDescribe : MonoBehaviour//음식설명을 UI에 배치하는 클래스
 {
     [SerializeField]
     Image image;
@@ -23,9 +22,6 @@ public class FoodDescribe : MonoBehaviour
     Text priceText;
     [SerializeField]
     int foodPrice;
-
-
-    // Start is called before the first frame update
     void Start()
     {
         image.sprite = sprite;

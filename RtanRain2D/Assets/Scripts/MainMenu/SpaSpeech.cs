@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class SpaSpeech : MonoBehaviour
+public class SpaSpeech : MonoBehaviour//상점에서 대화하기를 선택했을때 대화가 나오게 하는 클래스입니다.
 {
     [SerializeField]
     GameObject storeUi;

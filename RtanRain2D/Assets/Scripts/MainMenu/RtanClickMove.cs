@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-
-public class RtanClickMove : MonoBehaviour
+public class RtanClickMove : MonoBehaviour//메인화면에서 클릭하면 르탄이가 움직이게 하는 클래스
 {
     [SerializeField]
     private float rtanSpeed = 1f;
@@ -26,7 +25,7 @@ public class RtanClickMove : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
-            Debug.Log("UI�� Ŭ���߽��ϴ�. ĳ���� �̵��� �����ϴ�.");
+            Debug.Log("UI를 클릭했습니다. 캐릭터 이동을 막습니다.");
             return;
         }
         if (Input.GetMouseButtonDown(0))

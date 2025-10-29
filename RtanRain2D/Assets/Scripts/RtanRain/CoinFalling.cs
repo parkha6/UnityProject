@@ -1,5 +1,5 @@
 using UnityEngine;
-public class CoinFalling : MonoBehaviour
+public class CoinFalling : MonoBehaviour//코인의 로직을 정하는 클래스입니다.
 {
     float coinSize = 1.0f;
     int coinScore = 0;
@@ -35,12 +35,6 @@ public class CoinFalling : MonoBehaviour
         }
         transform.localScale = new Vector3(coinSize, coinSize);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -52,6 +46,5 @@ public class CoinFalling : MonoBehaviour
             GameManager.instance.AddMoney(coinScore);
             Destroy(this.gameObject);
         }
-
     }
 }

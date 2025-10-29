@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class SizeCreate : MonoBehaviour
+public class SizeCreate : MonoBehaviour//바위의 크기를 결정하는 클래스
 {
     // Start is called before the first frame update
     void Awake()

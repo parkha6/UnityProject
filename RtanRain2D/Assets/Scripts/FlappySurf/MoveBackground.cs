@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using RtanMetaverse;
-public class MoveBackground : MonoBehaviour
+public class MoveBackground : MonoBehaviour//앞으로 나가는 것 처럼 보이도록 배경을 움직이게 하는 클래스.
 {
     [SerializeField]
     internal float cameraSpeed = 4.5f;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace RtanMetaverse
 {
-    public class RtanSurf : MonoBehaviour
+    public class RtanSurf : MonoBehaviour//르탄이의 서핑로직을 담당하는 클래스
     {
         [SerializeField]
         private GameObject wave;
